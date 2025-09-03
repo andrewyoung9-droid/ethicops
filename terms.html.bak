@@ -1,0 +1,266 @@
+  <!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Terms of Use — EthicOps</title>
+<meta content="Terms of Service and End‑User License Agreement for EthicOps and Kame‑Ha Optimizer." name="description"/>
+<!-- Strict, JS‑light page. Keep CSP tight. -->
+<meta content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
+<meta content="no-referrer" http-equiv="Referrer-Policy"/>
+<meta content="nosniff" http-equiv="X-Content-Type-Options"/>
+<meta content="dark light" name="color-scheme"/>
+<style>
+    :root{--bg:#0d2b57;--ink:#e8eef6;--muted:#bcd3ea;--panel:#0f3564;--accent:#f59f45}
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial}
+    a{color:#cdeaff}
+    .container{max-width:1040px;margin:auto;padding:0 16px}
+    header{border-bottom:1px solid rgba(255,255,255,.12)}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+    .brand{font-weight:800}
+
+    .title{font-size:clamp(1.8rem,4vw,2.4rem);margin:0 0 8px;font-weight:800}
+    .lede{color:var(--muted);margin:0 0 18px}
+
+    .panel{background:linear-gradient(180deg,#114276,#0e315b);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:18px;box-shadow:0 12px 24px rgba(1,9,20,.35);margin:18px 0}
+    .toc{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media(max-width:760px){.toc{grid-template-columns:1fr}}
+    h2{font-size:1.35rem;margin:22px 0 8px}
+    h3{font-size:1.05rem;margin:14px 0 6px;color:#d6e7ff}
+    ul{margin:0 0 0 18px}
+    footer{border-top:1px solid rgba(255,255,255,.12);padding:28px 0;text-align:center;color:#b6cce6}
+    .muted{color:var(--muted)}
+    code{background:#0a2748;color:#e8f4ff;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:2px 6px}
+  
+    .menu{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    .menu a{color:#eaf2fb;opacity:.95;text-decoration:none}
+    .menu a:hover{text-decoration:underline;opacity:1}
+    .menu [aria-current=page]{color:#ffffff;font-weight:800}
+
+</style>
+<style>.inline-image img{max-width:100%;border-radius:12px;margin:20px auto;display:block;}</style>
+<style id="legal-theme">
+  :root{
+    --legal-bg:#f7f9fc;           /* very light */
+    --legal-ink:#0f172a;          /* slate-900 */
+    --legal-muted:#4b5563;        /* gray-600 */
+    --legal-link:#0b6ce8;         /* accessible blue */
+    --legal-code-bg:#f3f4f6;
+    --legal-border:#e5e7eb;
+  }
+  html{background:var(--legal-bg)}
+  body{background:var(--legal-bg)!important;color:var(--legal-ink)!important;}
+  main{max-width:900px;margin:34px auto;padding:0 18px;}
+  main, main *{text-align:left !important;}
+  main h1{font-size:2rem;line-height:1.2;margin:0 0 18px;font-weight:800;color:var(--legal-ink);}
+  main h2{font-size:1.35rem;margin:22px 0 10px;font-weight:700;color:var(--legal-ink);}
+  main h3{font-size:1.12rem;margin:18px 0 8px;font-weight:700;color:var(--legal-ink);}
+  main p, main li{font-size:1rem;line-height:1.8;color:var(--legal-ink);}
+  main .lede{color:var(--legal-muted)!important;}
+  main a{color:var(--legal-link);text-decoration:underline;}
+  main ul, main ol{padding-left:22px;margin:10px 0 18px;}
+  main hr{border:0;border-top:1px solid var(--legal-border);margin:22px 0;}
+  main code, main pre{background:var(--legal-code-bg);border:1px solid var(--legal-border);border-radius:8px;}
+  main code{padding:2px 6px}
+  main pre{padding:12px;overflow:auto}
+  header.sticky-bar{background:#ffffff!important;color:var(--legal-ink)!important;border-bottom:1px solid var(--legal-border)!important;}
+  header .links > a{color:var(--legal-ink)!important;opacity:.9}
+  header .links > a:hover{background:rgba(15,23,42,.06)!important}
+  .menu-btn{background:rgba(15,23,42,.06)!important;color:var(--legal-ink)!important;}
+  .menu-list{background:#fff!important;border:1px solid var(--legal-border)!important;}
+  .menu-list a{color:var(--legal-ink)!important;}
+  footer{background:#ffffff;border-top:1px solid var(--legal-border)!important;color:var(--legal-muted)!important;}
+</style>
+
+</head><body>
+<header class="sticky-bar">
+<div class="nav-container">
+<a class="brand" href="index.html"><img alt="EthicOps" class="logo" src="/images/legacylogo.png"/> EthicOps</a>
+<nav class="links">
+<a href="index.html">Home</a>
+<a href="download.html">Download</a>
+<a href="updates.html">Updates</a>
+<a href="press.html">Press</a>
+<a href="download.html">Support Us</a><div class="menu">
+<button aria-controls="menu-list" aria-expanded="false" class="menu-btn">Menu ▾</button>
+<div class="menu-list" hidden="" id="menu-list">
+<a href="faq.html">FAQ</a>
+<a href="trust.html">Trust</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<script>
+(function(){ 
+  const bar = document.currentScript.previousElementSibling;
+  const btn = bar.querySelector('.menu-btn');
+  const list = bar.querySelector('#menu-list');
+  btn.addEventListener('click', function(){
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if(list.hasAttribute('hidden')) list.removeAttribute('hidden'); else list.setAttribute('hidden','');
+  });
+})();
+</script>
+<style>
+  .sticky-bar{ position:sticky; top:0; z-index:1000; background:#0d2b57; color:#fff; border-bottom:1px solid rgba(255,255,255,.12)}
+  .nav-container{ max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:10px 16px; }
+  .brand{ display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; font-weight:800; letter-spacing:.2px; }
+  .brand .logo{ height:28px; width:auto; display:block; }
+  .links{ display:flex; align-items:center; gap:16px; }
+  .links > a{ color:#fff; text-decoration:none; opacity:.9; padding:6px 8px; border-radius:8px; }
+  .links > a:hover{ background:rgba(255,255,255,.08); opacity:1; }
+  .menu{ position:relative; }
+  .menu-btn{ background:rgba(255,255,255,.08); border:0; padding:6px 10px; color:#fff; border-radius:10px; cursor:pointer; }
+  .menu-list{ position:absolute; right:0; top:calc(100% + 8px); background:#0f3564; border:1px solid rgba(255,255,255,.15); border-radius:12px; padding:8px; display:flex; flex-direction:column; min-width:160px; box-shadow:0 8px 20px rgba(0,0,0,.25); }
+  .menu-list a{ color:#fff; text-decoration:none; padding:6px 10px; border-radius:8px; white-space:nowrap; }
+  .menu-list a:hover{ background:rgba(255,255,255,.08); }
+  @media (max-width:720px){ .links > a:not(:first-child):not(:nth-child(2)){ display:none; } }
+</style>
+<style>.legal.container{max-width:900px;margin:40px auto;padding:0 16px}
+    .legal h1{font-size:2.2rem;margin:.3rem 0 1rem}
+    .legal h2{margin-top:1.4rem}
+    details{background:#f6f8fb;border:1px solid #dbe5f3;padding:10px 12px;border-radius:10px}
+    </style>
+<main>
+<section class="legal container">
+<h1>Terms of Use</h1>
+<p><strong>Effective date:</strong> August 18, 2025</p>
+<p>Questions? Email <a href="mailto:security@ethicops.gt.tc">security@ethicops.gt.tc</a>.</p>
+<details open=""><summary>Summary (TL;DR)</summary>
+<ul>
+<li>We only collect what we need to operate and improve the product.</li>
+<li>No spyware, no telemetry in Kame‑Ha. Optional crash logs only if you choose.</li>
+<li>You can request your data or ask us to delete it anytime.</li>
+</ul>
+</details>
+<h2>Full Policy</h2>
+<div class="full-policy">
+<h1 class="title">Terms of Service &amp; End‑User License Agreement (EULA)</h1>
+<p class="lede">Effective: 2025‑08‑16 · Version 1.0 · Applies to EthicOps software and the Kame‑Ha Optimizer.</p>
+<section aria-label="Overview" class="panel">
+<p>By downloading, installing, or using our software, you agree to these Terms and the EULA. If you do not agree, do not download or use the software. These terms grant you a license; they do not sell you our intellectual property.</p>
+</section>
+<section aria-label="Contents" class="panel">
+<h2>Contents</h2>
+<div class="toc">
+<a href="#license">1. License Grant &amp; Scope</a>
+<a href="#restrictions">2. Restrictions</a>
+<a href="#ownership">3. Ownership</a>
+<a href="#updates">4. Updates &amp; Changes</a>
+<a href="#privacy">5. Privacy</a>
+<a href="#verify">6. Verification &amp; Authenticity</a>
+<a href="#refunds">7. Payments, Refunds &amp; Chargebacks</a>
+<a href="#warranty">8. Warranty Disclaimer</a>
+<a href="#liability">9. Limitation of Liability</a>
+<a href="#indemnity">10. Indemnification</a>
+<a href="#termination">11. Termination</a>
+<a href="#export">12. Export &amp; Sanctions</a>
+<a href="#law">13. Governing Law &amp; Venue</a>
+<a href="#thirdparty">14. Open‑Source &amp; Third‑Party Notices</a>
+<a href="#changes">15. Changes to These Terms</a>
+<a href="#contact">16. Contact</a>
+</div>
+</section>
+<section aria-labelledby="license-title" class="panel" id="license">
+<h2 id="license-title">1) License Grant &amp; Scope</h2>
+<p>EthicOps grants you a personal, non‑exclusive, non‑transferable, revocable license to install and use the software on computers that you own or control.</p>
+<h3>Standard &amp; Pro</h3>
+<ul>
+<li><strong>Standard:</strong> full core features for performance &amp; privacy profiles.</li>
+<li><strong>Pro:</strong> adds scheduled profiles, rollback checkpoints, and additional hardening presets. Pro features are licensed to the same user as Standard.</li>
+</ul>
+<h3>Per‑user, reasonable devices</h3>
+<p>Licenses are per person for your own devices under your control. A reasonable number of installations for that one user is permitted (e.g., desktop + laptop + test VM). You may not share a license with others.</p>
+<h3>Commercial use</h3>
+<p>Use on your work devices is allowed. Managed service providers (MSPs) or consultants must obtain a separate commercial arrangement before deploying to client machines.</p>
+<h3>Perpetual license; updates included</h3>
+<p>Licenses are perpetual; updates are included at no additional charge. Optional add‑ons may be offered separately.</p>
+</section>
+<section class="panel" id="restrictions">
+<h2>2) Restrictions</h2>
+<ul>
+<li>No redistribution, sublicensing, reselling, or providing the software as a hosted service.</li>
+<li>No circumvention of license, security, or signing mechanisms.</li>
+<li>No reverse engineering, decompilation, or modification except where permitted by applicable law.</li>
+<li>No use for unlawful activity, stalking/harassment, or to intentionally damage systems.</li>
+<li>No automated scraping or rate‑abuse of our websites or update endpoints.</li>
+</ul>
+</section>
+<section class="panel" id="ownership">
+<h2>3) Ownership</h2>
+<p>The software is licensed, not sold. EthicOps retains all rights, title, and interest, including all intellectual‑property rights.</p>
+</section>
+<section class="panel" id="updates">
+<h2>4) Updates &amp; Changes</h2>
+<ul>
+<li>The software does not include telemetry or analytics. Updates are offered for you to download and install.</li>
+<li>We may modify features, publish new versions, or withdraw legacy versions that are insecure.</li>
+</ul>
+</section>
+<section class="panel" id="privacy">
+<h2>5) Privacy</h2>
+<p>We do not collect telemetry from the software or this site. Payments are processed by PayPal; we do not receive card numbers. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+</section>
+<section class="panel" id="verify">
+<h2>6) Verification &amp; Authenticity</h2>
+<ul>
+<li>Official downloads are listed on the <a href="download.html">download page</a>. Verify <code>SHA‑256</code> and signatures before running.</li>
+<li>Windows Authenticode Publisher: <strong>EthicOps</strong>. PGP key &amp; fingerprints are on the <a href="trust.html">trust page</a>.</li>
+<li>We are not responsible for tampered packages from untrusted mirrors.</li>
+</ul>
+</section>
+<section class="panel" id="refunds">
+<h2>7) Payments, Refunds &amp; Chargebacks</h2>
+<ul>
+<li>Payments are handled by PayPal or its partners. Taxes, if any, are your responsibility.</li>
+<li>30‑day refund policy: see <a href="refunds.html">Refunds</a> for instructions.</li>
+<li>Chargebacks or fraudulent activity may result in license deactivation.</li>
+</ul>
+</section>
+<section class="panel" id="warranty">
+<h2>8) Warranty Disclaimer</h2>
+<p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SOFTWARE AND WEBSITE ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON‑INFRINGEMENT.</p>
+</section>
+<section class="panel" id="liability">
+<h2>9) Limitation of Liability</h2>
+<p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, ETHICOPS WILL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES. OUR TOTAL LIABILITY FOR ANY CLAIM RELATING TO THE SOFTWARE OR THESE TERMS IS LIMITED TO THE AMOUNT YOU PAID (IF ANY) FOR THE LICENSE.</p>
+</section>
+<section class="panel" id="indemnity">
+<h2>10) Indemnification</h2>
+<p>You agree to defend, indemnify, and hold harmless EthicOps from claims arising out of your misuse of the software or violation of these terms.</p>
+</section>
+<section class="panel" id="termination">
+<h2>11) Termination</h2>
+<p>We may suspend or terminate your license if you materially breach these terms. Upon termination you must stop using the software and destroy any copies. Sections intended to survive (ownership, warranty, liability, etc.) will continue.</p>
+</section>
+<section class="panel" id="export">
+<h2>12) Export &amp; Sanctions</h2>
+<p>You must comply with all applicable export‑control and sanctions laws. You represent that you are not located in, under the control of, or a national/resident of any embargoed country or prohibited party list.</p>
+</section>
+<section class="panel" id="law">
+<h2>13) Governing Law &amp; Venue</h2>
+<p>These terms are governed by the laws of the State of Minnesota, USA, excluding its conflict‑of‑laws rules and the U.N. Convention on Contracts for the International Sale of Goods. Exclusive venue for disputes is in state or federal courts located in Hennepin County, Minnesota.</p>
+</section>
+<section class="panel" id="thirdparty">
+<h2>14) Open‑Source &amp; Third‑Party Notices</h2>
+<p>The software may include or interact with open‑source components, each governed by its own license. Where required, notices will be included in the distribution. “Windows” and related marks are trademarks of Microsoft Corporation.</p>
+</section>
+<section class="panel" id="changes">
+<h2>15) Changes to These Terms</h2>
+<p>We may update these terms from time to time. We will post the updated version on this page and update the effective date. Your continued use constitutes acceptance of the changes.</p>
+</section>
+<section class="panel" id="contact">
+<h2>16) Contact</h2>
+<p>Legal &amp; support: <a href="mailto:support@ethicops.gt.tc">support@ethicops.gt.tc</a> · Security: <a href="mailto:security@ethicops.gt.tc">security@ethicops.gt.tc</a> · Press: <a href="mailto:press@ethicops.gt.tc">press@ethicops.gt.tc</a></p>
+<p class="muted">If any provision of these terms is held unenforceable, the remaining provisions will remain in full force.</p>
+</section>
+</div></section>
+<figure class="inline-image"><img alt="maxresdefault" src="/images/maxresdefault.jpg"/></figure></main>
+</body></htm
