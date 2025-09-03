@@ -1,10 +1,29 @@
 {
   "name": "EthicOps Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/powershell:latest",
   "features": {
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {
+      "version": "latest"
+    }
   },
   "settings": {
-    "terminal.integrated.defaultProfile.windows": "PowerShell"
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "powershell.codeFormatting.preset": "Custom",
+    "powershell.codeFormatting.whitespaceBeforeOpenBrace": true
   },
-  "postCreateCommand": "gh auth status"
+  "postCreateCommand": "gh auth status || echo 'GitHub CLI not authenticated'",
+  "mounts": [
+    "source=${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind"
+  ],
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.powershell",
+        "GitHub.vscode-pull-request-github",
+        "eamodio.gitlens"
+      ]
+    }
+  }
 }
