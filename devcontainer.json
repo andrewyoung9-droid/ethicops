@@ -1,0 +1,10 @@
+{
+  "name": "EthicOps Dev Container",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
+  },
+  "postCreateCommand": "gh auth status"
+}
