@@ -1,1 +1,6 @@
 *.bak
+*.zip
+*.7z
+*.rar
+__fixed*/
+site_fixed_images*/
