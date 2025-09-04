@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>EthicOps — Ethical Security Tools</title>
+<meta content="Pre-emptive tuning and privacy tooling for Windows. Ethically engineered, signed binaries, no spyware, no telemetry." name="description"/>
+<meta content="#0d3352" name="theme-color"/>
+<!-- OpenGraph -->
+<meta content="EthicOps — Kame-Ha Optimizer" property="og:title"/>
+<meta content="One-click performance &amp; privacy profiles for Windows." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="house.jpg" property="og:image"/>
+<!-- Security hardening via meta headers (also add these as real headers on the server when possible) -->
+<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.paypal.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.paypalobjects.com https://www.paypal.com; frame-src https://www.paypal.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self' https://www.paypal.com; frame-ancestors 'none'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
+<meta content="no-referrer" http-equiv="Referrer-Policy">
+<meta content="nosniff" http-equiv="X-Content-Type-Options"/>
+<!-- PayPal SDK (loads once per page) -->
+<script src="https://www.paypal.com/sdk/js?client-id=BAAJhEyASSUh_I_PbmU4K7cfRo1uWR8Bmx9JHpzm78Oq-BNZ7dhvYB9wn-msQmQ-8YgvnonDQfewphiSg&amp;components=hosted-buttons&amp;enable-funding=venmo¤cy=USD"></script>
+<style>
+  :root{
+    --bg:#0d2b57;
+    --card:#f6efe6;
+    --ink:#ffffff;
+    --cta:#f59f45;
+    --cta-ink:#111827;
+    --ring:#d7dce6;
+    --shadow:0 20px 30px rgba(3,15,28,.35), 0 6px 12px rgba(3,15,28,.25);
+  }
+  html{scroll-behavior:smooth}
+  body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;background:var(--bg);color:#e8eef6}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1000px;margin:auto;padding:0 16px}
+
+  header{background:var(--bg);border-bottom:1px solid rgba(255,255,255,.1)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{font-weight:800;letter-spacing:.2px;font-size:1.3rem;color:#fff}
+  .menu{display:flex;gap:28px}
+  .menu a{color:#eaf2fb;opacity:.9}
+  .menu a:hover{opacity:1}
+
+  .hero{padding:36px 0 18px}
+  .card{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;background:#f1ebdf;border:1px solid var(--ring);box-shadow:var(--shadow);border-radius:20px;padding:28px;color:#000}
+  .badge{display:inline-block;background:#ffb668;color:#4b2a00;border-radius:999px;font-weight:700;padding:6px 12px}
+  .title{font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.03;margin:.35rem 0 1rem;font-weight:800}
+  .lede{max-width:36ch}
+  .actions{display:flex;gap:12px;margin-top:18px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:12px 16px;font-weight:700;border:2px solid transparent}
+  .btn-primary{background:var(--cta);color:var(--cta-ink)}
+  .btn-ghost{color:#000;border-color:#cbd5e1;background:#fff}
+  .donate-hero{margin-top:8px;}
+  .donate-hero input[type="image"]{height:40px;width:auto;}
+
+  .illus{align-self:center;background:#fff;border:1px solid #e6e3db;border-radius:18px;padding:22px;min-height:240px}
+  .illus img{max-width:100%;height:auto;object-fit:contain;display:block;}
+
+  .promo{margin:22px 0 36px}
+  .promo .bar{background:rgba(255,255,255,.1);border-radius:12px;padding:18px 22px;color:#fff}
+
+  .content-section{margin:40px auto;color:#e8eef6;line-height:1.7}
+  .content-section h2{font-size:1.6rem;margin-bottom:12px}
+  .content-section p{margin-bottom:18px}
+
+  .paypal-section{margin:40px auto;text-align:center}
+
+  footer{border-top:1px solid rgba(255,255,255,.15);padding:36px 0;color:#a9bed8;font-size:.95rem;text-align:center}
+
+  .logo {max-width:100%;height:auto;display:block;}
+  .nav-container {overflow:visible;}
+
+  /* Ensure the [hidden] attribute always hides the dropdown */
+  .menu-list[hidden]{display:none!important;}
+
+  /* Keep the sticky bar on top of all content */
+  .sticky-bar{position:sticky;top:0;z-index:9999;}
+
+  /* Make sure the dropdown sits above other elements and shadows */
+  .menu{position:relative;z-index:10000;}
+  .menu-list{z-index:10001;}
+
+  /* Center non-hero sections by default */
+  main > *:not(.hero) *{ text-align:center }
+  main > *:not(.hero){ margin-left:auto; margin-right:auto; }
+
+  .inline-image img{max-width:100%;border-radius:12px;margin:20px auto;display:block;}
+  .sprinkle-figure{margin:8px 0 14px}
+  img.sprinkle{width:100%;max-height:260px;object-fit:cover;border-radius:12px;border:1px solid #e5eaf1}
+</style>
+<!-- JSON-LD: Organization & SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"EthicOps",
+  "url":"https://ethicops.gt.tc",
+  "logo":"https://ethicops.gt.tc/icon.png",
+  "sameAs":[]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Kame-Ha Optimizer",
+  "operatingSystem":"Windows",
+  "applicationCategory":"UtilitiesApplication",
+  "offers":[
+    {"@type":"Offer","name":"Standard","price":"15.00","priceCurrency":"USD","availability":"https://schema.org/InStock"},
+    {"@type":"Offer","name":"Pro","price":"29.00","priceCurrency":"USD","availability":"https://schema.org/PreOrder"}
+  ]
+}
+</script>
+</meta></head>
+<body>
+<header class="sticky-bar">
+<div class="nav-container">
+<a class="brand" href="index.html"><img alt="EthicOps logo" class="logo" src="legacylogo.png"/> EthicOps</a>
+<nav class="links">
+<a href="index.html">Home</a>
+<a href="download.html">Download</a>
+<a href="updates.html">Updates</a>
+<a href="press.html">Press</a>
+<a href="#donate">Support Us</a>
+<div class="menu">
+<button aria-controls="menu-list" aria-expanded="false" class="menu-btn">Menu ▾</button>
+<div class="menu-list" hidden="" id="menu-list">
+<a href="faq.html">FAQ</a>
+<a href="trust.html">Trust</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+<form action="https://www.paypal.com/donate" class="donate-inline" method="post" rel="noopener" target="_blank">
+<input name="hosted_button_id" type="hidden" value="H48TSMYSRJ7PN"/>
+<input alt="Donate with PayPal button" name="submit" src="https://www.paypal.com/en_US/i/scr/pixel.gif" title="Donate with PayPal" type="image"/>
+<img alt="" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"/>
+</form>
+</nav>
+</div>
+</header>
+<script>
+(function () {
+  const bar  = document.querySelector('.sticky-bar');
+  if (!bar) return;
+
+  const btn   = bar.querySelector('.menu-btn');
+  const list  = bar.querySelector('#menu-list');
+  const box   = bar.querySelector('.menu');
+  if (!btn || !list || !box) return;
+
+  // Force a known-closed state on load
+  btn.setAttribute('aria-expanded', 'false');
+  list.setAttribute('hidden', '');
+
+  function openMenu() {
+    btn.setAttribute('aria-expanded', 'true');
+    list.removeAttribute('hidden');
+  }
+  function closeMenu() {
+    btn.setAttribute('aria-expanded', 'false');
+    list.setAttribute('hidden', '');
+  }
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    expanded ? closeMenu() : openMenu();
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!list.hasAttribute('hidden') && !box.contains(e.target)) closeMenu();
+  });
+
+  // Close on Esc and on scroll
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+  window.addEventListener('scroll', closeMenu, { passive: true });
+
+  // Close on any menu link click
+  list.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+})();
+</script>
+<style>
+  .sticky-bar{ position:sticky; top:0; z-index:1000; background:#0d2b57; color:#fff; border-bottom:1px solid rgba(255,255,255,.12)}
+  .nav-container{ max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:10px 16px; }
+  .brand{ display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; font-weight:800; letter-spacing:.2px; }
+  .brand .logo{ height:28px; width:auto; display:block; }
+  .links{ display:flex; align-items:center; gap:16px; }
+  .links > a{ color:#fff; text-decoration:none; opacity:.9; padding:6px 8px; border-radius:8px; }
+  .links > a:hover{ background:rgba(255,255,255,.08); opacity:1; }
+  .menu{ position:relative; }
+  .menu-btn{ background:rgba(255,255,255,.08); border:0; padding:6px 10px; color:#fff; border-radius:10px; cursor:pointer; }
+  .menu-list{ position:absolute; right:0; top:calc(100% + 8px); background:#0f3564; border:1px solid rgba(255,255,255,.15); border-radius:12px; padding:8px; display:flex; flex-direction:column; min-width:160px; box-shadow:0 8px 20px rgba(0,0,0,.25); }
+  .menu-list a{ color:#fff; text-decoration:none; padding:6px 10px; border-radius:8px; white-space:nowrap; }
+  .menu-list a:hover{ background:rgba(255,255,255,.08); }
+  .donate-inline{ display:inline-block; margin-left:10px; }
+  .donate-inline input[type="image"]{ height:28px; width:auto; vertical-align:middle; }
+  @media (max-width:720px){ .links > a:not(:first-child):not(:nth-child(2)){ display:none; } }
+</style>
+<main>
+<section class="hero container">
+<div class="card">
+<div class="hero-text">
+<span class="badge">EthicOps</span>
+<h1 class="title">Expert Level Windows Tweaks for Everyday Users.</h1>
+<h3>We put the power in <em>your</em> hands.</h3>
+<p class="lede">
+          Minnesota-born and globally minded. We build tools for gamers, for privacy-first users, and PC enthusiasts.
+          Harden your device, boost your FPS, and take back control.
+        </p>
+<div class="actions">
+<a class="btn btn-primary" href="download.html">Download Tools</a>
+<a class="btn btn-ghost" href="about.html">Our Mission</a>
+<form action="https://www.paypal.com/donate" class="donate-hero" method="post" rel="noopener" target="_blank">
+<input name="hosted_button_id" type="hidden" value="H48TSMYSRJ7PN"/>
+<input alt="Donate with PayPal button" name="submit" src="https://www.paypal.com/en_US/i/scr/pixel.gif" title="Donate with PayPal" type="image"/>
+<img alt="" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"/>
+</form>
+</div>
+</div>
+<figure class="illus">
+<img alt="Blueprint of a secured home" src="house.jpg"/>
+</figure>
+</div>
+</section>
+<section class="promo container">
+<div class="bar">Pre-emptive tuning before the antivirus. Ethically engineered, signed binaries, no spyware, no telemetry.</div>
+</section>
+<section aria-label="Gallery sprinkle" class="container">
+<figure class="sprinkle-figure">
+<img alt="EthicOps shield logo" class="sprinkle" src="legacylogo.png"/>
+</figure>
+</section>
+<section aria-labelledby="grid-title" class="container" id="products">
+<h2 id="grid-title" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Products</h2>
+<article class="copy" style="display:grid;gap:22px;margin:4px 0 14px">
+<h3 style="margin:0;color:#bfe8f6">Performance tweaks most people skip</h3>
+<p style="margin:0;color:#d9e6f6"><a href="download.html">Kame-Ha</a> applies native Windows policies that are already on your PC—just rarely used together. Examples include trimming background tasks via <em>power plans</em> tuned for IO-heavy apps, disabling <em>redundant scheduled tasks</em>, and pausing <em>Search indexing</em> while gaming so disk stays focused on your workload.</p>
+<h3 style="margin:0;color:#bfe8f6">Network &amp; services hardening</h3>
+<p style="margin:0;color:#d9e6f6">We reduce surface area by disabling legacy protocols (SMBv1), closing unused inbound rules, and setting <em>service start types</em> to "Demand" for components that don’t need to run 24/7. You can snapshot, apply, and roll back in one click.</p>
+<h3 style="margin:0;color:#bfe8f6">Privacy without telemetry</h3>
+<p style="margin:0;color:#d9e6f6">Profiles turn off ad ID, background app permissions, and install-time data sharing. Nothing phones home—no spyware, no analytics SDKs. You keep control with a readable change log.</p>
+<h3 style="margin:0;color:#bfe8f6">Safe by design</h3>
+<p style="margin:0;color:#d9e6f6">Only signed binaries; all changes use <em>documented</em> Windows APIs, group policy templates, and PowerShell cmdlets. If a tweak isn’t reversible or violates best practices, it doesn’t ship.</p>
+</article>
+<!-- PayPal Hosted Button for Kame-Ha purchase -->
+<div class="paywrap" style="margin:26px 0 12px;display:flex;justify-content:center">
+<div id="paypal-container-KAMEHA"></div>
+</div>
+<script>
+      paypal.HostedButtons({ hostedButtonId: "Z7Q5EU9TWKUH2" })
+            .render("#paypal-container-KAMEHA");
+    </script>
+<div aria-label="Announcement bar" class="cta-bar" role="region">Pre-order <a href="download.html">Kame-Ha</a> now — lifetime license, updates included.</div>
+</section>
+<!-- Pricing & Features -->
+<section aria-labelledby="pricing-title" class="container" id="pricing" style="margin-top:34px">
+<h2 id="pricing-title" style="font-size:1.6rem;margin-bottom:12px;color:#e8eef6">Choose your edition</h2>
+<div class="pricing-grid" style="display:grid;gap:18px;grid-template-columns:1fr 1fr">
+<figure class="sprinkle-figure">
+<img alt="Kame-Ha Optimizer screenshot" class="sprinkle" src="maxresdefault.jpg">
+</img></figure>
+<article class="plan" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px">
+<h3 style="margin:0 0 8px;color:#bfe8f6"><a href="download.html">Kame-Ha</a> Standard</h3>
+<ul style="margin:0 0 12px 18px;line-height:1.7;color:#d9e6f6">
+<li>One-click Performance / Privacy profiles</li>
+<li>Service &amp; scheduled-task trimming</li>
+<li>Network &amp; legacy protocol hardening</li>
+<li>Signed binaries · No telemetry</li>
+</ul>
+<div id="paypal-container-KAMEHA-STD"></div>
+</article>
+<article class="plan" style="background:linear-gradient(180deg,#143d6e,#0e315b);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:16px;box-shadow:0 10px 24px rgba(0,0,0,.25)">
+<h3 style="margin:0 0 8px;color:#fff"><a href="download.html">Kame-Ha</a> Pro</h3>
+<ul style="margin:0 0 12px 18px;line-height:1.7;color:#e9f3ff">
+<li>Everything in Standard</li>
+<li>Scheduled profiles &amp; auto-rollback checkpoints</li>
+<li>Extra hardening presets (recording/streaming)</li>
+<li>Priority email support</li>
+</ul>
+<div id="paypal-container-KAMEHA-PRO"></div>
+</article>
+</div>
+<script>
+      // Standard button
+      paypal.HostedButtons({ hostedButtonId: "Z7Q5EU9TWKUH2" })
+            .render("#paypal-container-KAMEHA-STD");
+
+      // Pro button (replace ID below with your real PRO button id)
+      paypal.HostedButtons({ hostedButtonId: "REPLACE_WITH_PRO_BUTTON_ID" })
+            .render("#paypal-container-KAMEHA-PRO");
+    </script>
+</section>
+<!-- Quick verify instructions -->
+<section class="container" id="verify" style="margin-top:26px">
+<h2 style="font-size:1.4rem;margin-bottom:10px;color:#e8eef6">Verify integrity &amp; signature (quick)</h2>
+<div style="display:grid;gap:14px;grid-template-columns:1fr 1fr">
+<div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px">
+<p style="margin:0 0 6px;color:#cfe4ff"><strong>SHA-256 (PowerShell):</strong></p>
+<pre><code>Get-FileHash .\Kame-Ha-setup-x64.exe -Algorithm SHA256</code></pre>
+</div>
+<div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px">
+<p style="margin:0 0 6px;color:#cfe4ff"><strong>Authenticode signature:</strong></p>
+<pre><code>Get-AuthenticodeSignature .\Kame-Ha-setup-x64.exe | Format-List</code></pre>
+</div>
+</div>
+<p style="color:#9fc4e6;margin-top:10px">Expected Publisher: <em>EthicOps</em>. For PGP verification, see the instructions on the download page.</p>
+</section>
+<section class="paypal-section container" id="donate">
+<figure class="sprinkle-figure">
+<img alt="Twin Cities skyline" class="sprinkle" src="sites-twin-cities-minnesota-traveling-around-various-landmarks-overlooks-minneapolis-st-paul-230448098.webp">
+</img></figure>
+<h2>
+<a href="https://www.paypal.com/donate?token=TyvKuCCpEoxUiEqK_tJAJgpP65Nf770QvbU90hvigaFQn4Hv3kutNJjT2EBmMwoGox8F1BMX0wi9qg_t" rel="noopener" target="_blank">Support Our Work</a>
+</h2>
+<p>Not ready to buy? You can support ongoing development by donating. Every contribution helps us keep EthicOps private, ethical, and sustainable.</p>
+<article class="content-section" style="text-align:left">
+<h3 style="color:#bfe8f6;margin:0 0 8px">Human Privacy Rights Alliance — 2025 Campaign</h3>
+<p style="margin:0 0 10px;color:#d9e6f6">Minnesota-born effort to protect everyday people from cyberstalking and organized harassment with practical tools, education, and pro-bono help.</p>
+<ul style="margin:0 0 12px 18px;color:#d9e6f6">
+<li>Ship and maintain <em><a href="download.html">Kame-Ha</a></em> performance/privacy tool (free core, paid extras).</li>
+<li>Publish step-by-step defense guides and <em>no-telemetry</em> utilities.</li>
+<li>Offer limited pro-bono triage for victims (evidence capture &amp; hygiene).</li>
+<li>Community workshops: OPSEC, phishing resistance, device hardening.</li>
+</ul>
+<p style="margin:0;color:#9fc4e6"><strong>Note:</strong> Donations are currently <em>not tax-deductible</em>. 501(c)(3) status is a future goal.</p>
+</article>
+<div id="paypal-container-DONATE"></div>
+<div id="paypal-container-LXABRF3MWNWJQ8" style="margin-top:18px"></div>
+<script>
+      paypal.HostedButtons({ hostedButtonId: "H48TSMYSRJ7PN" }).render("#paypal-container-DONATE");
+      paypal.HostedButtons({ hostedButtonId: "LXABRF3MWNWJQ8" }).render("#paypal-container-LXABRF3MWNWJQ8");
+    </script>
+</section>
+<figure class="inline-image">
+<img alt="Downtown Minneapolis with people" src="minnesota-minneapolis-downtown-with-people-large.jpg">
+</img></figure>
+</main>
+<footer>
+<div class="container">
+    © <span id="y"></span> EthicOps. Built with privacy in mind.
+  </div>
+</footer>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

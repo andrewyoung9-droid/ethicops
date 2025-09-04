@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>FAQ | EthicOps</title>
+<meta content="Answers about features, privacy, refunds, and verification." name="description"/>
+<meta content="dark light" name="color-scheme"/>
+<!-- Open Graph -->
+<meta content="EthicOps — FAQ" property="og:title"/>
+<meta content="Answers about features, privacy, refunds, and verification." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="../legacylogo.png" property="og:image"/>
+<!-- Security hardening (no third-party scripts) -->
+<meta content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'; object-src 'none'; form-action 'self'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
+<meta content="no-referrer" http-equiv="Referrer-Policy">
+<meta content="nosniff" http-equiv="X-Content-Type-Options"/>
+<style>
+:root{--bg:#0d2b57;--ink:#e8eef6;--muted:#bcd3ea;--panel:#0f3564;--accent:#f59f45}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial}
+a{color:#cdeaff}
+.container{max-width:1040px;margin:auto;padding:0 16px}
+header{border-bottom:1px solid rgba(255,255,255,.12)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.brand{font-weight:800}
+.title{font-size:clamp(1.8rem,4vw,2.4rem);margin:0 0 10px;font-weight:800}
+.lede{color:var(--muted);margin:0 0 18px}
+.panel{background:linear-gradient(180deg,#114276,#0e315b);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:18px;box-shadow:0 12px 24px rgba(1,9,20,.35);margin:18px 0}
+.grid-2{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.grid-3{display:grid;gap:16px;grid-template-columns:1fr 1fr 1fr}
+@media(max-width:980px){.grid-3{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.grid-2,.grid-3{grid-template-columns:1fr}}
+figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#0b2a4d}
+.tile{aspect-ratio:4/3;width:100%;object-fit:cover;display:block}
+figcaption{font-size:.92rem;padding:8px 10px;color:#cfe0f7}
+code,pre{background:#0a2748;color:#e8f4ff;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:.35rem .5rem}
+pre{display:block;overflow:auto}
+footer{border-top:1px solid rgba(255,255,255,.12);padding:28px 0;text-align:center;color:#b6cce6}
+.small{font-size:.92rem}
+
+/* nav styles aligned across site */
+.logo {max-width:100%;height:auto;display:block;}
+.sticky-bar{ position:sticky; top:0; z-index:1000; background:#0d2b57; color:#fff; border-bottom:1px solid rgba(255,255,255,.12)}
+.nav-container{ max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:10px 16px; }
+.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; font-weight:800; letter-spacing:.2px; }
+.brand .logo{ height:28px; width:auto; display:block; }
+.links{ display:flex; align-items:center; gap:16px; }
+.links > a{ color:#fff; text-decoration:none; opacity:.9; padding:6px 8px; border-radius:8px; }
+.links > a:hover{ background:rgba(255,255,255,.08); opacity:1; }
+.menu{ position:relative; }
+.menu-btn{ background:rgba(255,255,255,.08); border:0; padding:6px 10px; color:#fff; border-radius:10px; cursor:pointer; }
+.menu-list{ position:absolute; right:0; top:calc(100% + 8px); background:#0f3564; border:1px solid rgba(255,255,255,.15); border-radius:12px; padding:8px; display:flex; flex-direction:column; min-width:160px; box-shadow:0 8px 20px rgba(0,0,0,.25); }
+.menu-list[hidden]{ display:none !important; }
+.menu-list a{ color:#fff; text-decoration:none; padding:6px 10px; border-radius:8px; white-space:nowrap; }
+.menu-list a:hover{ background:rgba(255,255,255,.08); }
+@media (max-width:720px){ .links > a:not(:first-child):not(:nth-child(2)){ display:none; } }
+
+/* page-specific */
+.inline-image img{max-width:100%;border-radius:12px;margin:20px auto;display:block;}
+.sprinkle-figure{margin:8px 0 14px}
+img.sprinkle{width:100%;max-height:260px;object-fit:cover;border-radius:12px;border:1px solid #e5eaf1}
+</style>
+</meta></head>
+<body>
+<header class="sticky-bar">
+<div class="nav-container">
+<a class="brand" href="index.html"><img alt="EthicOps logo" class="logo" src="../legacylogo.png"/> EthicOps</a>
+<nav class="links">
+<a href="index.html">Home</a>
+<a href="download.html">Download</a>
+<a href="updates.html">Updates</a>
+<a href="press.html">Press</a>
+<a href="index.html#donate">Support Us</a>
+<div class="menu">
+<button aria-controls="menu-list" aria-expanded="false" class="menu-btn">Menu ▾</button>
+<div class="menu-list" hidden="" id="menu-list">
+<a aria-current="page" href="faq.html">FAQ</a>
+<a href="trust.html">Trust</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<script>
+(function(){
+  const bar = document.querySelector('.sticky-bar');
+  if(!bar) return;
+  const btn = bar.querySelector('.menu-btn');
+  const list = bar.querySelector('#menu-list');
+  const menuBox = bar.querySelector('.menu');
+  if(!btn || !list || !menuBox) return;
+  function closeMenu(){ btn.setAttribute('aria-expanded','false'); list.setAttribute('hidden',''); }
+  function openMenu(){ btn.setAttribute('aria-expanded','true'); list.removeAttribute('hidden'); }
+  btn.addEventListener('click', (e)=>{ const ex = btn.getAttribute('aria-expanded')==='true'; ex?closeMenu():openMenu(); e.stopPropagation(); });
+  document.addEventListener('click', (e)=>{ if(!menuBox.contains(e.target) && !list.hasAttribute('hidden')) closeMenu(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeMenu(); });
+  window.addEventListener('scroll', closeMenu, {passive:true});
+  list.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
+})();
+</script>
+<main class="container">
+<h1 class="title">Frequently Asked Questions</h1>
+<p class="lede">Quick answers. If you still need help, write <a href="mailto:support@ethicops.gt.tc">support@ethicops.gt.tc</a>.</p>
+<section class="panel">
+<figure class="sprinkle-figure">
+<img alt="Kame-Ha Optimizer screenshot" class="sprinkle" src="../maxresdefault.jpg"/>
+</figure>
+<h2 class="title" style="font-size:1.35rem">Will this break my PC? Can I revert?</h2>
+<p>Kame-Ha applies documented Windows policies, service start-type changes, and scheduler/power-plan tweaks. A rollback option restores previous settings. When in doubt, create a system restore point first.</p>
+</section>
+<section class="panel">
+<figure class="sprinkle-figure">
+<img alt="Downtown Minneapolis with people" class="sprinkle" src="../minnesota-minneapolis-downtown-with-people-large.jpg"/>
+</figure>
+<h2 class="title" style="font-size:1.35rem">Does the app collect telemetry?</h2>
+<p>No. There is no analytics SDK or tracking. Downloads are signed and can be verified with <a href="trust.html">Authenticode, SHA-256, and PGP</a>.</p>
+</section>
+<section class="panel">
+<h2 class="title" style="font-size:1.35rem">What’s the difference between Standard and Pro?</h2>
+<ul>
+<li><strong>Standard</strong>: one-click performance/privacy profiles; service trimming; legacy protocol hardening.</li>
+<li><strong>Pro</strong>: everything in Standard plus scheduled profiles, extra hardening presets, and rollback checkpoints.</li>
+</ul>
+</section>
+<section class="panel">
+<h2 class="title" style="font-size:1.35rem">Refund policy?</h2>
+<p>30-day no-questions refund. See <a href="refunds.html">Refunds</a> for steps.</p>
+</section>
+<section class="panel">
+<h2 class="title" style="font-size:1.35rem">How do I verify the download?</h2>
+<pre>Get-FileHash .\kameha-setup-x64.exe -Algorithm SHA256
+gpg --import ethicops_pubkey.asc
+gpg --verify kameha-setup-x64.exe.asc kameha-setup-x64.exe</pre>
+<p class="small">Expected fingerprint: <code>E10C E5D7 FBC3 9023 6E74  D6D0 112F C8AF 5D65 590E</code></p>
+</section>
+<section class="panel">
+<h2 class="title" style="font-size:1.35rem">Hardware / OS requirements?</h2>
+<p>Windows 10/11 x64; ~50 MB disk; admin rights for certain policies.</p>
+</section>
+<figure class="inline-image">
+<img alt="Multi-generation family on a snowy path" src="../istockphoto-652663482-612x612.jpg">
+</img></figure>
+</main>
+<footer>© <span id="y"></span> EthicOps</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Update these when you pick a domain
+Contact: mailto:security@<your-domain>
+Policy: https://<your-domain-or-pages.dev>/trust.html
+Acknowledgments: https://<your-domain-or-pages.dev>/trust.html#credits
+Encryption: https://<your-domain-or-pages.dev>/pgp.txt
+Preferred-Languages: en
+Canonical: https://<your-domain-or-pages.dev>/.well-known/security.txt
