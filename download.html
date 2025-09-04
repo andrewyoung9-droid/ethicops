@@ -1,26 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Download — Kame-Ha Optimizer | EthicOps</title>
-<meta name="description" content="Secure download page for Kame-Ha Optimizer. Signed binaries, hashes, and verification instructions."/>
-<meta name="color-scheme" content="dark light"/>
-
+<meta content="Secure download page for Kame-Ha Optimizer. Signed binaries, hashes, and verification instructions." name="description"/>
+<meta content="dark light" name="color-scheme"/>
 <!-- Open Graph -->
-<meta property="og:title" content="Download Kame-Ha Optimizer — EthicOps"/>
-<meta property="og:description" content="Signed binaries, published hashes, and verification steps. No telemetry."/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="https://ethicops.gt.tc/images/legacylogo.png"/>
-
+<meta content="Download Kame-Ha Optimizer — EthicOps" property="og:title"/>
+<meta content="Signed binaries, published hashes, and verification steps. No telemetry." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://ethicops.gt.tc/images/legacylogo.png" property="og:image"/>
 <!-- Security headers that work via <meta> (host headers still recommended) -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.paypal.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.paypalobjects.com https://www.paypal.com; frame-src https://www.paypal.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self' https://www.paypal.com; frame-ancestors 'none'; upgrade-insecure-requests">
-<meta http-equiv="Referrer-Policy" content="no-referrer"/>
-<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
-
+<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.paypal.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.paypalobjects.com https://www.paypal.com; frame-src https://www.paypal.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self' https://www.paypal.com; frame-ancestors 'none'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
+<meta content="no-referrer" http-equiv="Referrer-Policy">
+<meta content="nosniff" http-equiv="X-Content-Type-Options"/>
 <!-- PayPal SDK once per page for checkout/donate buttons -->
-<script src="https://www.paypal.com/sdk/js?client-id=BAAJhEyASSUh_I_PbmU4K7cfRo1uWR8Bmx9JHpzm78Oq-BNZ7dhvYB9wn-msQmQ-8YgvnonDQfewphiSg&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
-
+<script src="https://www.paypal.com/sdk/js?client-id=BAAJhEyASSUh_I_PbmU4K7cfRo1uWR8Bmx9JHpzm78Oq-BNZ7dhvYB9wn-msQmQ-8YgvnonDQfewphiSg&amp;components=hosted-buttons&amp;enable-funding=venmo¤cy=USD"></script>
 <style>
   :root{--bg:#0d2b57;--ink:#e8eef6;--muted:#bcd3ea;--card:#0f3564;--accent:#f59f45}
   *{box-sizing:border-box}
@@ -74,32 +71,31 @@
   .sprinkle-figure{margin:8px 0 14px}
   img.sprinkle{width:100%;max-height:260px;object-fit:cover;border-radius:12px;border:1px solid #e5eaf1}
 </style>
-</head>
+</meta></head>
 <body>
 <header class="sticky-bar">
-  <div class="nav-container">
-    <a class="brand" href="index.html"><img alt="EthicOps logo" class="logo" src="/images/legacylogo.png"/> EthicOps</a>
-    <nav class="links">
-      <a href="index.html">Home</a>
-      <a href="download.html" aria-current="page">Download</a>
-      <a href="updates.html">Updates</a>
-      <a href="press.html">Press</a>
-      <a href="index.html#donate">Support Us</a>
-      <div class="menu">
-        <button aria-controls="menu-list" aria-expanded="false" class="menu-btn">Menu ▾</button>
-        <div class="menu-list" hidden id="menu-list">
-          <a href="faq.html">FAQ</a>
-          <a href="trust.html">Trust</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+<div class="nav-container">
+<a class="brand" href="index.html"><img alt="EthicOps logo" class="logo" src="images/legacylogo.png"/> EthicOps</a>
+<nav class="links">
+<a href="index.html">Home</a>
+<a aria-current="page" href="download.html">Download</a>
+<a href="updates.html">Updates</a>
+<a href="press.html">Press</a>
+<a href="index.html#donate">Support Us</a>
+<div class="menu">
+<button aria-controls="menu-list" aria-expanded="false" class="menu-btn">Menu ▾</button>
+<div class="menu-list" hidden="" id="menu-list">
+<a href="faq.html">FAQ</a>
+<a href="trust.html">Trust</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+</nav>
+</div>
 </header>
-
 <script>
 (function(){
   const bar = document.querySelector('.sticky-bar');
@@ -117,48 +113,44 @@
   list.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
 })();
 </script>
-
 <main class="container">
-  <section class="hero">
-    <h1 class="title">Download Kame-Ha Optimizer</h1>
-    <p class="lede">Cryptographically signed, with published hashes and step-by-step verification. No telemetry.</p>
-
-    <div class="panel grid" role="region" aria-label="Downloads">
-      <div>
-        <h2>Installer (recommended)</h2>
-        <p class="lede">Stable release — creates Start Menu shortcuts and enables easy updates.</p>
-        <p><a class="btn btn-primary" href="/downloads/KameHaSetup.exe" download>Download .exe</a></p>
-        <p><small class="muted">Signature: <a href="/downloads/KameHaSetup.exe.asc" download>PGP .asc</a></small></p>
-      </div>
-      <div>
-        <h2>Portable (no install)</h2>
-        <p class="lede">Extract and run. Ideal for offline or admin-restricted environments.</p>
-        <p><a class="btn btn-ghost" href="/downloads/KameHa_Portable.zip" download>Download .zip</a></p>
-        <p><small class="muted">Signature: <a href="/downloads/KameHa_Portable.zip.asc" download>PGP .asc</a></small></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Verify the download (SHA-256)</h2>
-    <p>After downloading, verify integrity matches our published hash.</p>
-    <div class="panel">
-      <p><strong>Published hashes</strong> (update when you publish a new build):</p>
+<section class="hero">
+<h1 class="title">Download Kame-Ha Optimizer</h1>
+<p class="lede">Cryptographically signed, with published hashes and step-by-step verification. No telemetry.</p>
+<div aria-label="Downloads" class="panel grid" role="region">
+<div>
+<h2>Installer (recommended)</h2>
+<p class="lede">Stable release — creates Start Menu shortcuts and enables easy updates.</p>
+<p><a class="btn btn-primary" download="" href="/downloads/KameHaSetup.exe">Download .exe</a></p>
+<p><small class="muted">Signature: <a download="" href="/downloads/KameHaSetup.exe.asc">PGP .asc</a></small></p>
+</div>
+<div>
+<h2>Portable (no install)</h2>
+<p class="lede">Extract and run. Ideal for offline or admin-restricted environments.</p>
+<p><a class="btn btn-ghost" download="" href="/downloads/KameHa_Portable.zip">Download .zip</a></p>
+<p><small class="muted">Signature: <a download="" href="/downloads/KameHa_Portable.zip.asc">PGP .asc</a></small></p>
+</div>
+</div>
+</section>
+<section class="section">
+<h2>Verify the download (SHA-256)</h2>
+<p>After downloading, verify integrity matches our published hash.</p>
+<div class="panel">
+<p><strong>Published hashes</strong> (update when you publish a new build):</p>
 <pre>
 Installer: SHA256= 53fc0ce0256af0af5312a4b1ba4b53baf0971e7ce34346e46c67b067a25c7ba4
 Portable : SHA256= 108ac140ed24a20ae0794ea746531091edcede98e4743ac46878f8bfebcbfec9
 </pre>
-      <p><strong>Windows PowerShell</strong>:</p>
+<p><strong>Windows PowerShell</strong>:</p>
 <pre>Get-FileHash .\KameHaSetup.exe -Algorithm SHA256</pre>
-      <p><strong>macOS / Linux</strong>:</p>
+<p><strong>macOS / Linux</strong>:</p>
 <pre>shasum -a 256 KameHa_Portable.zip</pre>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Verify the signature (PGP)</h2>
-    <div class="panel">
-      <p>Import our public key and verify the <code>.asc</code> signature.</p>
+</div>
+</section>
+<section class="section">
+<h2>Verify the signature (PGP)</h2>
+<div class="panel">
+<p>Import our public key and verify the <code>.asc</code> signature.</p>
 <pre>
 # 1) Save our public key to EthicOps-publickey.asc
 # 2) Import
@@ -168,67 +160,61 @@ gpg --verify KameHaSetup.exe.asc KameHaSetup.exe
 #    or for the portable zip:
 gpg --verify KameHa_Portable.zip.asc KameHa_Portable.zip
 </pre>
-      <p>Download our public key: <a href="/downloads/EthicOps-publickey.asc">EthicOps-publickey.asc</a></p>
-      <details>
-        <summary>Show EthicOps public key</summary>
+<p>Download our public key: <a href="/downloads/EthicOps-publickey.asc">EthicOps-publickey.asc</a></p>
+<details>
+<summary>Show EthicOps public key</summary>
 <pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
 REPLACE_WITH_YOUR_PUBLIC_KEY
 -----END PGP PUBLIC KEY BLOCK-----</pre>
-      </details>
-    </div>
-    <p class="small muted">Tip: publish your key fingerprint here and on your social profiles for cross-verification.</p>
-  </section>
-
-  <section class="section">
-    <h2>Purchase / Donate</h2>
-    <article class="content-section" style="text-align:left">
-      <h3 style="color:#bfe8f6;margin:0 0 8px">Human Privacy Rights Alliance — 2025 Campaign</h3>
-      <p style="margin:0 0 10px;color:#d9e6f6">Minnesota-born effort to protect everyday people from cyberstalking and organized harassment with practical tools, education, and pro-bono help.</p>
-      <ul style="margin:0 0 12px 18px;color:#d9e6f6">
-        <li>Ship and maintain <em>Kame-Ha</em> performance/privacy tool (free core, paid extras).</li>
-        <li>Publish step-by-step defense guides and <em>no-telemetry</em> utilities.</li>
-        <li>Offer limited pro-bono triage for victims (evidence capture &amp; hygiene).</li>
-        <li>Community workshops: OPSEC, phishing resistance, device hardening.</li>
-      </ul>
-      <p style="margin:0;color:#9fc4e6"><strong>Note:</strong> Donations are currently <em>not tax-deductible</em>. 501(c)(3) status is a future goal.</p>
-    </article>
-
-    <div class="panel center">
-      <figure class="sprinkle-figure">
-        <img class="sprinkle" src="/images/minnesota-minneapolis-downtown-with-people-large.jpg" alt="Downtown Minneapolis with people">
-      </figure>
-
-      <div style="max-width:520px;width:100%">
-        <div id="paypal-container-purchase"></div>
-        <div style="height:14px"></div>
-        <div id="paypal-container-donate"></div>
-
-        <!-- Fallback donate form if JS widget fails -->
-        <div class="center" id="donate-fallback" style="display:none;margin-top:10px">
-          <figure class="sprinkle-figure">
-            <img class="sprinkle" src="/images/minneapolis-mn-riverfront-credit-lanepelovsky-courtesyofmeetminneapolis-large.jpg.webp" alt="Minneapolis riverfront at dusk">
-          </figure>
-          <form action="https://www.paypal.com/donate" method="post" target="_top">
-            <input type="hidden" name="hosted_button_id" value="H48TSMYSRJ7PN"/>
-            <input type="image" name="submit" title="Donate with PayPal" alt="Donate with PayPal button" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"/>
-            <img alt="" width="1" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif"/>
-          </form>
-          <p>Questions about safety? See our <a href="trust.html">Trust &amp; Security</a>.</p>
-        </div>
-
-        <noscript>
-          <div class="center" style="margin-top:10px">
-            <form action="https://www.paypal.com/donate" method="post" target="_top">
-              <input type="hidden" name="hosted_button_id" value="H48TSMYSRJ7PN"/>
-              <input type="image" name="submit" title="Donate with PayPal" alt="Donate with PayPal button" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"/>
-              <img alt="" width="1" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif"/>
-            </form>
-          </div>
-        </noscript>
-      </div>
-    </div>
-
-    <script>
+</details>
+</div>
+<p class="small muted">Tip: publish your key fingerprint here and on your social profiles for cross-verification.</p>
+</section>
+<section class="section">
+<h2>Purchase / Donate</h2>
+<article class="content-section" style="text-align:left">
+<h3 style="color:#bfe8f6;margin:0 0 8px">Human Privacy Rights Alliance — 2025 Campaign</h3>
+<p style="margin:0 0 10px;color:#d9e6f6">Minnesota-born effort to protect everyday people from cyberstalking and organized harassment with practical tools, education, and pro-bono help.</p>
+<ul style="margin:0 0 12px 18px;color:#d9e6f6">
+<li>Ship and maintain <em>Kame-Ha</em> performance/privacy tool (free core, paid extras).</li>
+<li>Publish step-by-step defense guides and <em>no-telemetry</em> utilities.</li>
+<li>Offer limited pro-bono triage for victims (evidence capture &amp; hygiene).</li>
+<li>Community workshops: OPSEC, phishing resistance, device hardening.</li>
+</ul>
+<p style="margin:0;color:#9fc4e6"><strong>Note:</strong> Donations are currently <em>not tax-deductible</em>. 501(c)(3) status is a future goal.</p>
+</article>
+<div class="panel center">
+<figure class="sprinkle-figure">
+<img alt="Downtown Minneapolis with people" class="sprinkle" src="images/minnesota-minneapolis-downtown-with-people-large.jpg"/>
+</figure>
+<div style="max-width:520px;width:100%">
+<div id="paypal-container-purchase"></div>
+<div style="height:14px"></div>
+<div id="paypal-container-donate"></div>
+<!-- Fallback donate form if JS widget fails -->
+<div class="center" id="donate-fallback" style="display:none;margin-top:10px">
+<figure class="sprinkle-figure">
+<img alt="Minneapolis riverfront at dusk" class="sprinkle" src="images/minneapolis-mn-riverfront-credit-lanepelovsky-courtesyofmeetminneapolis-large.jpg.webp"/>
+</figure>
+<form action="https://www.paypal.com/donate" method="post" target="_top">
+<input name="hosted_button_id" type="hidden" value="H48TSMYSRJ7PN"/>
+<input alt="Donate with PayPal button" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" title="Donate with PayPal" type="image"/>
+<img alt="" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1">
+</img></form>
+<p>Questions about safety? See our <a href="trust.html">Trust &amp; Security</a>.</p>
+</div>
+<noscript>
+<div class="center" style="margin-top:10px">
+<form action="https://www.paypal.com/donate" method="post" target="_top">
+<input name="hosted_button_id" type="hidden" value="H48TSMYSRJ7PN"/>
+<input alt="Donate with PayPal button" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" title="Donate with PayPal" type="image"/>
+<img alt="" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1">
+</img></form>
+</div>
+</noscript>
+</div>
+</div>
+<script>
       // Replace with your own button IDs
       const PURCHASE_BUTTON_ID = "Z7Q5EU9TWKUH2"; // product hosted button id
       const DONATE_BUTTON_ID   = "H48TSMYSRJ7PN"; // donate hosted button id
@@ -258,54 +244,47 @@ REPLACE_WITH_YOUR_PUBLIC_KEY
         }, 2500);
       })();
     </script>
-  </section>
-
-  <section class="section">
-    <h2>Release notes</h2>
-    <div class="panel">
-      <p><strong>v1.0.0</strong> — initial release. Profiles for Gaming, Recording, and Privacy-Max; service hardening presets; one-click rollbacks.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Requirements</h2>
-    <div class="panel">
-      <ul>
-        <li>Windows 10/11 x64</li>
-        <li>Administrator rights (to apply certain policies)</li>
-        <li>~50 MB free disk space</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Mirrors &amp; integrity</h2>
-    <div class="panel">
-      <p>If a mirror is used, verify the file against the hashes above. We never distribute via random file-sharing sites.</p>
-      <ul>
-        <li><a href="https://ethicops.gt.tc/downloads/" rel="noopener">Primary mirror</a></li>
-        <li><a href="#" rel="noopener">Secondary mirror (add later)</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Privacy &amp; support</h2>
-    <div class="panel">
-      <p>No telemetry, ads, or hidden network calls. If you find a bug, email <a href="mailto:support@ethicops.gt.tc">support@ethicops.gt.tc</a>.</p>
-    </div>
-  </section>
-
-  <figure class="inline-image">
-    <img src="/images/maxresdefault.jpg" alt="Kame-Ha UI preview">
-  </figure>
+</section>
+<section class="section">
+<h2>Release notes</h2>
+<div class="panel">
+<p><strong>v1.0.0</strong> — initial release. Profiles for Gaming, Recording, and Privacy-Max; service hardening presets; one-click rollbacks.</p>
+</div>
+</section>
+<section class="section">
+<h2>Requirements</h2>
+<div class="panel">
+<ul>
+<li>Windows 10/11 x64</li>
+<li>Administrator rights (to apply certain policies)</li>
+<li>~50 MB free disk space</li>
+</ul>
+</div>
+</section>
+<section class="section">
+<h2>Mirrors &amp; integrity</h2>
+<div class="panel">
+<p>If a mirror is used, verify the file against the hashes above. We never distribute via random file-sharing sites.</p>
+<ul>
+<li><a href="https://ethicops.gt.tc/downloads/" rel="noopener">Primary mirror</a></li>
+<li><a href="#" rel="noopener">Secondary mirror (add later)</a></li>
+</ul>
+</div>
+</section>
+<section class="section">
+<h2>Privacy &amp; support</h2>
+<div class="panel">
+<p>No telemetry, ads, or hidden network calls. If you find a bug, email <a href="mailto:support@ethicops.gt.tc">support@ethicops.gt.tc</a>.</p>
+</div>
+</section>
+<figure class="inline-image">
+<img alt="Kame-Ha UI preview" src="images/maxresdefault.jpg"/>
+</figure>
 </main>
-
 <footer>
-  <div class="container">© <span id="y"></span> EthicOps</div>
+<div class="container">© <span id="y"></span> EthicOps</div>
 </footer>
 <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
-
 <script>
   // Small utility: click-to-copy (attach data-copy attr to any link/button)
   document.addEventListener('click', function(e){

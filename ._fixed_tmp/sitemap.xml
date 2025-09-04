@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://<your-domain-or-pages.dev>/</loc></url>
+  <url><loc>https://<your-domain-or-pages.dev>/about.html</loc></url>
+  <url><loc>https://<your-domain-or-pages.dev>/contact.html</loc></url>
+  <url><loc>https://<your-domain-or-pages.dev>/download.html</loc></url>
+  <url><loc>https://<your-domain-or-pages.dev>/faq.html</loc></url>
+  <url><loc>https://<your-domain-or-pages.dev>/press.html</loc></url>
+  <url><loc>https://<your-domain-or-pages.dev>/privacy.html</loc></url>
+  <url><loc>https://<your-domain-or-pages.dev>/terms.html</loc></url>
+  <url><loc>https://<your-domain-or-pages.dev>/trust.html</loc></url>
+  <url><loc>https://<your-domain-or-pages.dev>/updates.html</loc></url>
+  <url><loc>https://<your-domain-or-pages.dev>/thanks.html</loc></url>
+</urlset>

@@ -1,23 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Privacy Policy — EthicOps</title>
-<meta name="description" content="Data we collect (very little), how we use it, and your choices."/>
-<meta name="color-scheme" content="dark light"/>
-
+<meta content="Data we collect (very little), how we use it, and your choices." name="description"/>
+<meta content="dark light" name="color-scheme"/>
 <!-- Open Graph -->
-<meta property="og:title" content="EthicOps — Privacy Policy"/>
-<meta property="og:description" content="Data we collect (very little), how we use it, and your choices."/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="https://ethicops.gt.tc/images/legacylogo.png"/>
-
+<meta content="EthicOps — Privacy Policy" property="og:title"/>
+<meta content="Data we collect (very little), how we use it, and your choices." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://ethicops.gt.tc/images/legacylogo.png" property="og:image"/>
 <!-- Security hardening via meta headers (tailored to this page) -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'; object-src 'none'; form-action 'self'; upgrade-insecure-requests">
-<meta http-equiv="Referrer-Policy" content="no-referrer"/>
-<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
-
+<meta content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'; object-src 'none'; form-action 'self'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
+<meta content="no-referrer" http-equiv="Referrer-Policy">
+<meta content="nosniff" http-equiv="X-Content-Type-Options"/>
 <style>
 :root{--bg:#0d2b57;--ink:#e8eef6;--muted:#bcd3ea;--panel:#0f3564;--accent:#f59f45}
 *{box-sizing:border-box} html,body{height:100%}
@@ -91,39 +89,37 @@ header .links > a:hover{background:rgba(15,23,42,.06)!important}
 .menu-list a{color:var(--legal-ink)!important;}
 footer{background:#ffffff;border-top:1px solid var(--legal-border)!important;color:var(--legal-muted)!important;}
 </style>
-
 <style>.inline-image img{max-width:100%;border-radius:12px;margin:20px auto;display:block;}</style>
 <style>.legal.container{max-width:900px;margin:40px auto;padding:0 16px}
   .legal h1{font-size:2.2rem;margin:.3rem 0 1rem}
   .legal h2{margin-top:1.4rem}
   details{background:#f6f8fb;border:1px solid #dbe5f3;padding:10px 12px;border-radius:10px}
 </style>
-</head>
+</meta></head>
 <body>
 <header class="sticky-bar">
-  <div class="nav-container">
-    <a class="brand" href="index.html"><img alt="EthicOps logo" class="logo" src="/images/legacylogo.png"/> EthicOps</a>
-    <nav class="links">
-      <a href="index.html">Home</a>
-      <a href="download.html">Download</a>
-      <a href="updates.html">Updates</a>
-      <a href="press.html">Press</a>
-      <a href="index.html#donate">Support Us</a>
-      <div class="menu">
-        <button aria-controls="menu-list" aria-expanded="false" class="menu-btn">Menu ▾</button>
-        <div class="menu-list" hidden id="menu-list">
-          <a href="faq.html">FAQ</a>
-          <a href="trust.html">Trust</a>
-          <a href="privacy.html" aria-current="page">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+<div class="nav-container">
+<a class="brand" href="index.html"><img alt="EthicOps logo" class="logo" src="images/legacylogo.png"/> EthicOps</a>
+<nav class="links">
+<a href="index.html">Home</a>
+<a href="download.html">Download</a>
+<a href="updates.html">Updates</a>
+<a href="press.html">Press</a>
+<a href="index.html#donate">Support Us</a>
+<div class="menu">
+<button aria-controls="menu-list" aria-expanded="false" class="menu-btn">Menu ▾</button>
+<div class="menu-list" hidden="" id="menu-list">
+<a href="faq.html">FAQ</a>
+<a href="trust.html">Trust</a>
+<a aria-current="page" href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+</nav>
+</div>
 </header>
-
 <script>
 (function(){
   const bar = document.querySelector('.sticky-bar');
@@ -141,78 +137,67 @@ footer{background:#ffffff;border-top:1px solid var(--legal-border)!important;col
   list.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
 })();
 </script>
-
 <main>
-  <section class="legal container">
-    <h1>Privacy Policy</h1>
-    <p><strong>Effective date:</strong> August 18, 2025</p>
-    <p>Questions? Email <a href="mailto:security@ethicops.gt.tc">security@ethicops.gt.tc</a>.</p>
-
-    <details open><summary>Summary (TL;DR)</summary>
-      <ul>
-        <li>We only collect what we need to operate and improve the product.</li>
-        <li>No spyware, no telemetry in Kame-Ha. Optional crash logs only if you choose.</li>
-        <li>You can request your data or ask us to delete it anytime.</li>
-      </ul>
-    </details>
-
-    <h2>Full Policy</h2>
-    <div class="full-policy">
-      <h1 class="title">Privacy Policy</h1>
-      <p class="lede">Effective 2025-08-18 — plain-English summary of what we do and don’t collect.</p>
-
-      <section class="panel">
-        <h2 class="title" style="font-size:1.35rem">1. What we collect</h2>
-        <ul>
-          <li><strong>Software:</strong> No telemetry, analytics, or background beacons.</li>
-          <li><strong>Website:</strong> No analytics cookies. Web server logs (IP, user agent, time) are retained briefly for security and abuse prevention.</li>
-          <li><strong>Payments:</strong> Processed by PayPal. We receive your transaction record (amount, time, status) but <em>not</em> your card number.</li>
-          <li><strong>Email:</strong> If you email us, we will keep your message to respond and for support history.</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2 class="title" style="font-size:1.35rem">2. Use of information</h2>
-        <ul>
-          <li>Provide downloads, process orders, offer support, fight fraud/abuse.</li>
-          <li>Publish anonymous stats (e.g., number of downloads) — never personal data.</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2 class="title" style="font-size:1.35rem">3. Data retention</h2>
-        <ul>
-          <li>Server logs: short-term rotation.</li>
-          <li>Support tickets/emails: retained as needed for ongoing support.</li>
-          <li>Payment records: kept for accounting and legal compliance.</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2 class="title" style="font-size:1.35rem">4. Your choices</h2>
-        <ul>
-          <li>Don’t want email retained? Ask us to delete support threads once resolved.</li>
-          <li>Verification options include Authenticode, SHA-256, and PGP signatures (see <a href="trust.html">Trust</a>).</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2 class="title" style="font-size:1.35rem">5. Security</h2>
-        <p>All official downloads are signed. The website enforces a strict Content Security Policy and avoids third-party scripts where possible.</p>
-      </section>
-
-      <section class="panel">
-        <h2 class="title" style="font-size:1.35rem">6. Contact</h2>
-        <p>Email <a href="mailto:privacy@ethicops.gt.tc">privacy@ethicops.gt.tc</a>. PGP key &amp; fingerprints are on the <a href="trust.html">Trust page</a>.</p>
-      </section>
-    </div>
-  </section>
-
-  <figure class="inline-image">
-    <img alt="Minneapolis skyline" src="/images/minneapolis.webp"/>
-  </figure>
+<section class="legal container">
+<h1>Privacy Policy</h1>
+<p><strong>Effective date:</strong> August 18, 2025</p>
+<p>Questions? Email <a href="mailto:security@ethicops.gt.tc">security@ethicops.gt.tc</a>.</p>
+<details open=""><summary>Summary (TL;DR)</summary>
+<ul>
+<li>We only collect what we need to operate and improve the product.</li>
+<li>No spyware, no telemetry in Kame-Ha. Optional crash logs only if you choose.</li>
+<li>You can request your data or ask us to delete it anytime.</li>
+</ul>
+</details>
+<h2>Full Policy</h2>
+<div class="full-policy">
+<h1 class="title">Privacy Policy</h1>
+<p class="lede">Effective 2025-08-18 — plain-English summary of what we do and don’t collect.</p>
+<section class="panel">
+<h2 class="title" style="font-size:1.35rem">1. What we collect</h2>
+<ul>
+<li><strong>Software:</strong> No telemetry, analytics, or background beacons.</li>
+<li><strong>Website:</strong> No analytics cookies. Web server logs (IP, user agent, time) are retained briefly for security and abuse prevention.</li>
+<li><strong>Payments:</strong> Processed by PayPal. We receive your transaction record (amount, time, status) but <em>not</em> your card number.</li>
+<li><strong>Email:</strong> If you email us, we will keep your message to respond and for support history.</li>
+</ul>
+</section>
+<section class="panel">
+<h2 class="title" style="font-size:1.35rem">2. Use of information</h2>
+<ul>
+<li>Provide downloads, process orders, offer support, fight fraud/abuse.</li>
+<li>Publish anonymous stats (e.g., number of downloads) — never personal data.</li>
+</ul>
+</section>
+<section class="panel">
+<h2 class="title" style="font-size:1.35rem">3. Data retention</h2>
+<ul>
+<li>Server logs: short-term rotation.</li>
+<li>Support tickets/emails: retained as needed for ongoing support.</li>
+<li>Payment records: kept for accounting and legal compliance.</li>
+</ul>
+</section>
+<section class="panel">
+<h2 class="title" style="font-size:1.35rem">4. Your choices</h2>
+<ul>
+<li>Don’t want email retained? Ask us to delete support threads once resolved.</li>
+<li>Verification options include Authenticode, SHA-256, and PGP signatures (see <a href="trust.html">Trust</a>).</li>
+</ul>
+</section>
+<section class="panel">
+<h2 class="title" style="font-size:1.35rem">5. Security</h2>
+<p>All official downloads are signed. The website enforces a strict Content Security Policy and avoids third-party scripts where possible.</p>
+</section>
+<section class="panel">
+<h2 class="title" style="font-size:1.35rem">6. Contact</h2>
+<p>Email <a href="mailto:privacy@ethicops.gt.tc">privacy@ethicops.gt.tc</a>. PGP key &amp; fingerprints are on the <a href="trust.html">Trust page</a>.</p>
+</section>
+</div>
+</section>
+<figure class="inline-image">
+<img alt="Minneapolis skyline" src="images/minneapolis.webp"/>
+</figure>
 </main>
-
 <footer>© <span id="y"></span> EthicOps. Built with privacy in mind.</footer>
 <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>

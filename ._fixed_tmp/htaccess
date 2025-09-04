@@ -1,0 +1,111 @@
+ ############################################
+# EthicOps .htaccess (root)
+# Safe defaults for static site + PayPal
+############################################
+
+# ------------ Basic hardening ------------
+
+# 1) Disable directory listings
+Options -Indexes
+
+# 2) Block access to dotfiles (.git, .env, etc.) and .htaccess itself
+<FilesMatch "^(\.|.*\.bak|.*\.swp)$">
+  Require all denied
+</FilesMatch>
+<Files ".htaccess">
+  Require all denied
+</Files>
+
+# 3) Block direct access to common config files if present
+<FilesMatch "(^wp-config\.php|composer\.(json|lock)|package(-lock)?\.json|yarn\.lock|pnpm-lock\.yaml|Dockerfile|docker-compose\.yml|config\.(php|json|yml))$">
+  Require all denied
+</FilesMatch>
+
+# 4) Prevent PHP execution in uploads/images (adjust path if you create an /uploads/ folder)
+# Comment out if host doesn’t allow php_flag
+<IfModule mod_php.c>
+  <DirectoryMatch "^(.*)/uploads/">
+    php_flag engine off
+  </DirectoryMatch>
+</IfModule>
+
+# --------- Canonical & HTTPS redirect ---------
+# If your host provides HTTPS, force it. Comment this block if you get a loop.
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Optional: force non-www or www (pick ONE, comment the other)
+
+# Non‑www (https://ethicops.gt.tc)
+#RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+#RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# www (https://www.ethicops.gt.tc)
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --------------- MIME safety ---------------
+# Make sure modern file types are served with correct types
+AddType image/webp .webp
+AddType image/svg+xml .svg
+AddType application/wasm .wasm
+AddType application/json .json
+AddType text/plain .md .txt
+
+# --------------- Caching -------------------
+# Lightweight, friendly cache policy for static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Images (cache long)
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg  "access plus 1 year"
+  ExpiresByType image/png  "access plus 1 year"
+  ExpiresByType image/gif  "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  # CSS/JS (moderate)
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  # HTML (no long-term cache)
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Optional: small compression boost if available
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# ------------- Security headers -------------
+# NOTE: Some shared hosts disable mod_headers. If you see 500 errors, comment this whole block.
+
+<IfModule mod_headers.c>
+  # Clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # MIME sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Basic XSS protection (legacy)
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Referrer policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # COOP/COEP (optional; comment out if you embed third-party widgets beyond PayPal)
+  #Header always set Cross-Origin-Opener-Policy "same-origin"
+  #Header always set Cross-Origin-Embedder-Policy "require-corp"
+
+  # HSTS (ONLY if you’re confident HTTPS works everywhere, including subdomains)
+  #Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Content Security Policy (server-level). If you keep the CSP <meta> in HTML, prefer ONE or the other.
+  # This mirrors your page’s needs (PayPal SDK + Hosted Buttons + images).
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.paypal.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.paypalobjects.com; frame-src https://www.paypal.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self' https://www.paypal.com"
+</IfModule>
+
+# --------------- Error pages ----------------
+# Serve friendly fallbacks if you add custom error HTML later
+#ErrorDocument 404 /404.html
+#ErrorDocument 500 /500.html

@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Page moved — EthicOps</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
+<meta charset="utf-8"/>
+<title>Page moved — EthicOps</title>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<style>
     :root { color-scheme: light dark; }
     body { font: 16px system-ui, Segoe UI, Roboto, sans-serif; margin: 0; padding: 4rem 1rem; display: grid; place-items: center; }
     .card { max-width: 720px; padding: 1.5rem; border: 1px solid #bbb5; border-radius: 14px; }
@@ -14,14 +15,13 @@
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>We moved a few things</h1>
-    <p>Looks like this link changed during our cleanup. If we can figure out the new spot, we’ll take you there automatically.</p>
-    <p>New target (if detected): <code id="target">—</code></p>
-    <a class="button" href="/index.html">Go to Home</a>
-  </div>
-
-  <script>
+<div class="card">
+<h1>We moved a few things</h1>
+<p>Looks like this link changed during our cleanup. If we can figure out the new spot, we’ll take you there automatically.</p>
+<p>New target (if detected): <code id="target">—</code></p>
+<a class="button" href="/index.html">Go to Home</a>
+</div>
+<script>
   (function() {
     const originalPath = decodeURIComponent(location.pathname);
     const file = originalPath.split('/').pop();
