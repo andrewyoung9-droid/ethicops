@@ -4,3 +4,5 @@
 *.rar
 __fixed*/
 site_fixed_images*/
+*.zip
+__reset/
