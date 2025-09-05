@@ -12,3 +12,13 @@ _*tmp*/
 new-images/
 images/_old/
 _*tmp*/
+
+# Local binaries (served via GitHub Releases)
+KameHa_*.zip
+KameHa_*.exe
+
+# Local temp/build
+_fixed_tmp/
+downloads.tmp
+builds/
+*.tmp

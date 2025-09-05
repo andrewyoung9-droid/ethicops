@@ -6,15 +6,15 @@
 <title>Page moved — EthicOps</title>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <style>
-    :root { color-scheme: light dark; }
-    body { font: 16px system-ui, Segoe UI, Roboto, sans-serif; margin: 0; padding: 4rem 1rem; display: grid; place-items: center; }
-    .card { max-width: 720px; padding: 1.5rem; border: 1px solid #bbb5; border-radius: 14px; }
-    h1 { margin: 0 0 .5rem; font-size: 1.6rem; }
-    code { padding: .15rem .35rem; border-radius: .35rem; background: #00000010; }
-    a.button { display:inline-block; margin-top: 1rem; padding:.6rem 1rem; border-radius:10px; text-decoration:none; border:1px solid #8885 }
-  </style>
-  <link rel="icon" type="image/png" href="/images/R.jpg?v=1757034268">
-  <link rel="stylesheet" href="/styles.css?v=1757043433">
+ :root { color-scheme: light dark; }
+ body { font: 16px system-ui, Segoe UI, Roboto, sans-serif; margin: 0; padding: 4rem 1rem; display: grid; place-items: center; }
+ .card { max-width: 720px; padding: 1.5rem; border: 1px solid #bbb5; border-radius: 14px; }
+ h1 { margin: 0 0 .5rem; font-size: 1.6rem; }
+ code { padding: .15rem .35rem; border-radius: .35rem; background: #00000010; }
+ a.button { display:inline-block; margin-top: 1rem; padding:.6rem 1rem; border-radius:10px; text-decoration:none; border:1px solid #8885 }
+ </style>
+ <link rel="icon" type="image/png" href="/images/R.jpg?v=1757034268">
+ <link rel="stylesheet" href="/styles.css?v=1757043433">
 </head>
 <body>
 <div class="card">
@@ -24,39 +24,39 @@
 <a class="button" href="/index.html">Go to Home</a>
 </div>
 <script>
-  (function() {
-    const originalPath = decodeURIComponent(location.pathname);
-    const file = originalPath.split('/').pop();
-    const ext  = (file.split('.').pop() || '').toLowerCase();
+ (function() {
+ const originalPath = decodeURIComponent(location.pathname);
+ const file = originalPath.split('/').pop();
+ const ext = (file.split('.').pop() || '').toLowerCase();
 
-    // Map by extension
-    const mapExt = {
-      images:    ['png','jpg','jpeg','gif','svg','webp','avif'],
-      assets:    ['css','js','ico','webmanifest','map','ttf','otf','woff','woff2'],
-      downloads: ['exe','zip','msi','asc','sig','sha256','sha1','pdf']
-    };
+ // Map by extension
+ const mapExt = {
+ images: ['png','jpg','jpeg','gif','svg','webp','avif'],
+ assets: ['css','js','ico','webmanifest','map','ttf','otf','woff','woff2'],
+ downloads: ['exe','zip','msi','asc','sig','sha256','sha1','pdf']
+ };
 
-    function setTarget(t){ try{ document.getElementById('target').textContent = t; }catch(_){} }
-    function jump(to){ setTarget(to); setTimeout(()=>location.replace(to), 200); }
+ function setTarget(t){ try{ document.getElementById('target').textContent = t; }catch(_){} }
+ function jump(to){ setTarget(to); setTimeout(()=>location.replace(to), 200); }
 
-    // 1) If the ZIP left a /EthicOps/ prefix, strip it.
-    const noPrefix = originalPath.replace(/^\/?EthicOps\//i, '/');
-    if (noPrefix !== originalPath) { return jump(noPrefix); }
+ // 1) If the ZIP left a /EthicOps/ prefix, strip it.
+ const noPrefix = originalPath.replace(/^\/?EthicOps\//i, '/');
+ if (noPrefix !== originalPath) { return jump(noPrefix); }
 
-    // 2) Extension-based moves (root files moved into folders)
-    for (const [folder, list] of Object.entries(mapExt)) {
-      if (list.includes(ext)) return jump('/' + folder + '/' + file);
-    }
+ // 2) Extension-based moves (root files moved into folders)
+ for (const [folder, list] of Object.entries(mapExt)) {
+ if (list.includes(ext)) return jump('/' + folder + '/' + file);
+ }
 
-    // 3) Common slugs -> .html
-    const slugs = { '/privacy': '/privacy.html', '/terms':'/terms.html', '/download':'/download.html' };
-    if (slugs[originalPath]) return jump(slugs[originalPath]);
+ // 3) Common slugs -> .html
+ const slugs = { '/privacy': '/privacy.html', '/terms':'/terms.html', '/download':'/download.html' };
+ if (slugs[originalPath]) return jump(slugs[originalPath]);
 
-    // 4) If it’s a page without an extension, try .html
-    if (!ext && !originalPath.endsWith('/')) return jump(originalPath + '.html');
+ // 4) If it’s a page without an extension, try .html
+ if (!ext && !originalPath.endsWith('/')) return jump(originalPath + '.html');
 
-    // 5) Otherwise leave the helper UI visible.
-  })();
-  </script>
+ // 5) Otherwise leave the helper UI visible.
+ })();
+ </script>
 </body>
 </html>

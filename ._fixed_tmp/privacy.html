@@ -59,12 +59,12 @@ footer{border-top:1px solid rgba(255,255,255,.12);padding:28px 0;text-align:cent
 
 /* legal light theme override */
 :root{
-  --legal-bg:#f7f9fc;           /* very light */
-  --legal-ink:#0f172a;          /* slate-900 */
-  --legal-muted:#4b5563;        /* gray-600 */
-  --legal-link:#0b6ce8;         /* accessible blue */
-  --legal-code-bg:#f3f4f6;
-  --legal-border:#e5e7eb;
+ --legal-bg:#f7f9fc; /* very light */
+ --legal-ink:#0f172a; /* slate-900 */
+ --legal-muted:#4b5563; /* gray-600 */
+ --legal-link:#0b6ce8; /* accessible blue */
+ --legal-code-bg:#f3f4f6;
+ --legal-border:#e5e7eb;
 }
 html{background:var(--legal-bg)}
 body{background:var(--legal-bg)!important;color:var(--legal-ink)!important;}
@@ -91,9 +91,9 @@ footer{background:#ffffff;border-top:1px solid var(--legal-border)!important;col
 </style>
 <style>.inline-image img{max-width:100%;border-radius:12px;margin:20px auto;display:block;}</style>
 <style>.legal.container{max-width:900px;margin:40px auto;padding:0 16px}
-  .legal h1{font-size:2.2rem;margin:.3rem 0 1rem}
-  .legal h2{margin-top:1.4rem}
-  details{background:#f6f8fb;border:1px solid #dbe5f3;padding:10px 12px;border-radius:10px}
+ .legal h1{font-size:2.2rem;margin:.3rem 0 1rem}
+ .legal h2{margin-top:1.4rem}
+ details{background:#f6f8fb;border:1px solid #dbe5f3;padding:10px 12px;border-radius:10px}
 </style>
 </meta></head>
 <body>
@@ -104,7 +104,7 @@ footer{background:#ffffff;border-top:1px solid var(--legal-border)!important;col
 <a href="index.html">Home</a>
 <a href="download.html">Download</a>
 <a href="updates.html">Updates</a>
-<a href="press.html">Press</a>
+
 <a href="index.html#donate">Support Us</a>
 <div class="menu">
 <button aria-controls="menu-list" aria-expanded="false" class="menu-btn">Menu ▾</button>
@@ -122,19 +122,19 @@ footer{background:#ffffff;border-top:1px solid var(--legal-border)!important;col
 </header>
 <script>
 (function(){
-  const bar = document.querySelector('.sticky-bar');
-  if(!bar) return;
-  const btn = bar.querySelector('.menu-btn');
-  const list = bar.querySelector('#menu-list');
-  const menuBox = bar.querySelector('.menu');
-  if(!btn || !list || !menuBox) return;
-  function closeMenu(){ btn.setAttribute('aria-expanded','false'); list.setAttribute('hidden',''); }
-  function openMenu(){ btn.setAttribute('aria-expanded','true'); list.removeAttribute('hidden'); }
-  btn.addEventListener('click', (e)=>{ const ex = btn.getAttribute('aria-expanded')==='true'; ex?closeMenu():openMenu(); e.stopPropagation(); });
-  document.addEventListener('click', (e)=>{ if(!menuBox.contains(e.target) && !list.hasAttribute('hidden')) closeMenu(); });
-  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeMenu(); });
-  window.addEventListener('scroll', closeMenu, {passive:true});
-  list.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
+ const bar = document.querySelector('.sticky-bar');
+ if(!bar) return;
+ const btn = bar.querySelector('.menu-btn');
+ const list = bar.querySelector('#menu-list');
+ const menuBox = bar.querySelector('.menu');
+ if(!btn || !list || !menuBox) return;
+ function closeMenu(){ btn.setAttribute('aria-expanded','false'); list.setAttribute('hidden',''); }
+ function openMenu(){ btn.setAttribute('aria-expanded','true'); list.removeAttribute('hidden'); }
+ btn.addEventListener('click', (e)=>{ const ex = btn.getAttribute('aria-expanded')==='true'; ex?closeMenu():openMenu(); e.stopPropagation(); });
+ document.addEventListener('click', (e)=>{ if(!menuBox.contains(e.target) && !list.hasAttribute('hidden')) closeMenu(); });
+ document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeMenu(); });
+ window.addEventListener('scroll', closeMenu, {passive:true});
+ list.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
 })();
 </script>
 <main>

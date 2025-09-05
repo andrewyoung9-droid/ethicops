@@ -46,21 +46,21 @@ footer{border-top:1px solid rgba(255,255,255,.12);padding:28px 0;text-align:cent
 
 /* About hero */
 .about-hero{
-  background-image:url("/images/4.jpg?v=1757034268");
-  background-size:cover;
-  background-position:center;
-  position:relative;
-  color:#fff;
-  padding:72px 0;
+ background-image:url("/images/4.jpg?v=1757034268");
+ background-size:cover;
+ background-position:center;
+ position:relative;
+ color:#fff;
+ padding:72px 0;
 }
 .about-hero::after{
-  content:'';
-  position:absolute; inset:0;
-  background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.35));
+ content:'';
+ position:absolute; inset:0;
+ background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.35));
 }
 .about-hero .inner{
-  position:relative; z-index:1;
-  max-width:900px; margin:0 auto; padding:0 16px; text-align:center;
+ position:relative; z-index:1;
+ max-width:900px; margin:0 auto; padding:0 16px; text-align:center;
 }
 .about-hero h1{font-size:2.4rem;margin:0 0 .6rem}
 
@@ -68,8 +68,8 @@ footer{border-top:1px solid rgba(255,255,255,.12);padding:28px 0;text-align:cent
 .mission{max-width:900px;margin:36px auto;padding:0 16px}
 .mission h2{margin-top:1.2rem}
 </style>
-</meta>  <link rel="icon" type="image/png" href="/images/2.jpg?v=1757034268">
-  <link rel="stylesheet" href="/styles.css?v=1757043433">
+</meta> <link rel="icon" type="image/png" href="/images/2.jpg?v=1757034268">
+ <link rel="stylesheet" href="/styles.css?v=1757043433">
 </head>
 <body>
 <header class="sticky-bar">
@@ -79,7 +79,7 @@ footer{border-top:1px solid rgba(255,255,255,.12);padding:28px 0;text-align:cent
 <a href="index.html">Home</a>
 <a href="download.html">Download</a>
 <a href="updates.html">Updates</a>
-<a href="press.html">Press</a>
+
 <a href="index.html#donate">Support Us</a>
 <div class="menu">
 <button aria-controls="menu-list" aria-expanded="false" class="menu-btn">Menu ▾</button>
@@ -97,19 +97,19 @@ footer{border-top:1px solid rgba(255,255,255,.12);padding:28px 0;text-align:cent
 </header>
 <script>
 (function(){
-  const bar = document.querySelector('.sticky-bar');
-  if(!bar) return;
-  const btn = bar.querySelector('.menu-btn');
-  const list = bar.querySelector('#menu-list');
-  const menuBox = bar.querySelector('.menu');
-  if(!btn || !list || !menuBox) return;
-  function closeMenu(){ btn.setAttribute('aria-expanded','false'); list.setAttribute('hidden',''); }
-  function openMenu(){ btn.setAttribute('aria-expanded','true'); list.removeAttribute('hidden'); }
-  btn.addEventListener('click', (e)=>{ const ex = btn.getAttribute('aria-expanded')==='true'; ex?closeMenu():openMenu(); e.stopPropagation(); });
-  document.addEventListener('click', (e)=>{ if(!menuBox.contains(e.target) && !list.hasAttribute('hidden')) closeMenu(); });
-  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeMenu(); });
-  window.addEventListener('scroll', closeMenu, {passive:true});
-  list.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
+ const bar = document.querySelector('.sticky-bar');
+ if(!bar) return;
+ const btn = bar.querySelector('.menu-btn');
+ const list = bar.querySelector('#menu-list');
+ const menuBox = bar.querySelector('.menu');
+ if(!btn || !list || !menuBox) return;
+ function closeMenu(){ btn.setAttribute('aria-expanded','false'); list.setAttribute('hidden',''); }
+ function openMenu(){ btn.setAttribute('aria-expanded','true'); list.removeAttribute('hidden'); }
+ btn.addEventListener('click', (e)=>{ const ex = btn.getAttribute('aria-expanded')==='true'; ex?closeMenu():openMenu(); e.stopPropagation(); });
+ document.addEventListener('click', (e)=>{ if(!menuBox.contains(e.target) && !list.hasAttribute('hidden')) closeMenu(); });
+ document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeMenu(); });
+ window.addEventListener('scroll', closeMenu, {passive:true});
+ list.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
 })();
 </script>
 <main>
