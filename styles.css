@@ -84,3 +84,123 @@ main.wrap > section:not(.hero){
 }
 /* ensure plain paragraphs right under main still readable */
 main.wrap > p { color: var(--ink); background:#fff; border:1px solid var(--line); border-radius: var(--radius); padding:12px 14px; box-shadow: var(--shadow); }
+
+/* =========================================================
+   FINAL NORMALIZATION OVERRIDES (keep at end of file)
+   - fixes vertical-writing glitch
+   - makes hero CTAs horizontal
+   - unifies pricing cards
+   - plain, readable legal pages (light theme)
+   ========================================================= */
+
+/* --- Kill accidental vertical writing anywhere --- */
+html, body, main, section, article, h1, h2, h3, h4, h5, h6, p, li, a, button {
+  writing-mode: horizontal-tb !important;
+  white-space: normal !important;
+}
+
+/* --- Hero layout & CTAs (force left column, horizontal row) --- */
+.hero .card{
+  display:grid !important;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr) !important;
+  gap:24px !important;
+  align-items:start !important;
+}
+.hero .hero-text{ grid-column:1 !important; display:flex !important; flex-direction:column !important; gap:12px !important; }
+.hero .illus{ grid-column:2 !important; align-self:center !important; }
+.hero .illus img{ max-width:100% !important; height:auto !important; display:block !important; }
+
+.actions{
+  display:flex !important; gap:12px !important; flex-wrap:wrap !important; align-items:center !important;
+}
+.actions .btn{ white-space:nowrap !important; height:auto !important; }
+.btn, .btn *{ color:inherit !important; text-shadow:none !important; }
+.btn-primary { background: var(--cta, #f59f45) !important; color: var(--cta-ink, #111827) !important; }
+.btn-ghost   { background:#fff !important; color:#0f172a !important; border:1px solid #e5e7eb !important; }
+.btn-primary:hover{ filter:brightness(0.95) }
+
+/* Hide any stray hero-level action blocks that slipped outside .hero-text */
+.hero .card > .actions,
+.hero .card > .donate-inline{ display:none !important; }
+
+/* --- Remove the mid-page PayPal chunk if it still exists --- */
+.paywrap, #paypal-container-KAMEHA { display:none !important; }
+
+/* --- Pricing: two clean white cards, centered --- */
+.pricing-grid{
+  display:grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap:22px !important;
+  max-width:1000px !important;
+  margin:0 auto !important;
+  align-items:start !important;
+}
+@media (max-width:880px){ .pricing-grid{ grid-template-columns:1fr !important; } }
+
+.plan{
+  background:#fff !important; color:#0f172a !important;
+  border:1px solid #e5e7eb !important; border-radius:14px !important;
+  padding:18px !important; box-shadow:0 10px 24px rgba(0,0,0,.06) !important;
+}
+.plan-title{ margin:10px 0 8px !important; font-size:1.15rem !important; }
+.plan-title a{ color:#1d4ed8 !important; text-decoration:underline !important; }
+.plan-list{ margin:0 0 12px 18px !important; line-height:1.7 !important; }
+.plan-media{
+  margin:0 0 10px !important; background:#fff !important; border:1px solid #e5e7eb !important;
+  border-radius:12px !important; padding:10px !important;
+}
+.plan-media img{ display:block !important; width:100% !important; height:auto !important; border-radius:8px !important; }
+.plan-pay{ margin-top:10px !important; }
+#paypal-std, #paypal-pro{ display:block !important; }
+
+/* --- LEGAL PAGES: light document look with minimal header/footer --- */
+body.legal-page{
+  background:#f9fafb !important; color:#1f2937 !important; line-height:1.6 !important;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif !important;
+}
+
+/* minimal, light chrome */
+body.legal-page header,
+body.legal-page .site-header,
+body.legal-page footer,
+body.legal-page .site-footer{
+  display:block !important;
+  background:#ffffff !important;
+  color:#334155 !important;
+  border-bottom:1px solid #e5e7eb !important;
+  border-top:1px solid #e5e7eb !important;
+  box-shadow:none !important;
+}
+body.legal-page header .inner,
+body.legal-page .site-header .inner { padding:10px 16px !important; }
+
+/* legal content wrapper (use any that exists) */
+body.legal-page .legal-doc,
+body.legal-page main,
+body.legal-page .wrap,
+body.legal-page .container{
+  max-width:800px !important;
+  margin:24px auto !important;
+  padding:2rem 1rem !important;
+  background:#fff !important;
+  border:1px solid #e5e7eb !important;
+  border-radius:12px !important;
+  box-shadow:0 4px 12px rgba(0,0,0,.05) !important;
+}
+
+/* clean, readable type */
+body.legal-page h1, body.legal-page h2, body.legal-page h3{
+  color:#111827 !important; font-weight:700 !important; margin-top:1.5rem !important; margin-bottom:.75rem !important;
+}
+body.legal-page h1{ font-size:1.75rem !important; }
+body.legal-page h2{ font-size:1.4rem  !important; }
+body.legal-page h3{ font-size:1.15rem !important; }
+body.legal-page p, body.legal-page li{ color:#374151 !important; margin-bottom:1rem !important; }
+body.legal-page ul, body.legal-page ol{ margin-left:1.5rem !important; }
+body.legal-page a{ color:#2563eb !important; text-decoration:underline !important; }
+
+/* tables if present */
+body.legal-page table{ width:100% !important; border-collapse:collapse !important; margin:1.5rem 0 !important; }
+body.legal-page th, body.legal-page td{ border:1px solid #e5e7eb !important; padding:.5rem .75rem !important; text-align:left !important; }
+body.legal-page th{ background:#f3f4f6 !important; font-weight:600 !important; }
+

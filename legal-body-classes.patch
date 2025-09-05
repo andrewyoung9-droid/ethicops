@@ -1,0 +1,54 @@
+--- a/privacy.html
++++ b/privacy.html
+@@
+-<body>
++<body class="legal-page privacy-page">
+
+--- a/terms.html
++++ b/terms.html
+@@
+-<body>
++<body class="legal-page terms-page">
+
+--- a/trust.html
++++ b/trust.html
+@@
+-<body>
++<body class="legal-page trust-page">
+
+--- a/faq.html
++++ b/faq.html
+@@
+-<body>
++<body class="legal-page faq-page">
+diff --git a/privacy.html b/privacy.html
+index 1234567..abcdef0 100644
+--- a/privacy.html
++++ b/privacy.html
+@@
+-<body>
++<body class="legal-page privacy-page">
+
+diff --git a/terms.html b/terms.html
+index 1234567..abcdef0 100644
+--- a/terms.html
++++ b/terms.html
+@@
+-<body>
++<body class="legal-page terms-page">
+
+diff --git a/trust.html b/trust.html
+index 1234567..abcdef0 100644
+--- a/trust.html
++++ b/trust.html
+@@
+-<body>
++<body class="legal-page trust-page">
+
+diff --git a/faq.html b/faq.html
+index 1234567..abcdef0 100644
+--- a/faq.html
++++ b/faq.html
+@@
+-<body>
++<body class="legal-page faq-page">
