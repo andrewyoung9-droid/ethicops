@@ -493,6 +493,18 @@
 <script>
  document.getElementById('y').textContent = new Date().getFullYear();
 </script>
+<script id="dedupe-support-ethicops">(function(){
+  try {
+    var hs=[].slice.call(document.querySelectorAll("h3"));
+    var seen=false;
+    hs.forEach(function(h){
+      if((h.textContent||"").trim()==="Support EthicOps"){
+        if(seen){ h.parentElement && h.parentElement.removeChild(h); }
+        else { seen=true; }
+      }
+    });
+  } catch(e){}
+})();</script>
 </body>
 </html>
 
