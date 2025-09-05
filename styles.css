@@ -1,0 +1,23 @@
+/* EthicOps baseline stylesheet (you can refine later) */
+:root{
+  --bg:#0e2a47; --panel:#0f3358; --card:#0f172a; --paper:#f5f7fb;
+  --text:#0b1220; --text-inv:#e7eef9; --muted:#5b6b85;
+  --brand:#2563eb; --brand-600:#1d4ed8; --ring:rgba(37,99,235,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.6}
+a{color:var(--brand);text-decoration:none}
+a:focus{outline:3px solid var(--ring);outline-offset:2px}
+header,nav,footer,.hero,.container{max-width:1100px;margin:0 auto}
+body{background:var(--bg)}
+header.site{background:#09203a;border-bottom:1px solid rgba(255,255,255,.08)}
+header.site .inner{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:12px 16px;color:var(--text-inv)}
+nav a{color:var(--text-inv);padding:.45rem .7rem;border-radius:10px}
+nav a:hover{background:rgba(255,255,255,.08)}
+.hero{background:#f3ede4;border-radius:16px;margin:16px;padding:24px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:999px;background:var(--brand);color:#fff;font-weight:600}
+.btn:hover{background:var(--brand-600)}
+.card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:16px;margin:16px 0;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+img{max-width:100%;height:auto;display:block}
+main{background:#fff;border-radius:16px;margin:16px;padding:16px}
+footer.site{color:#cbd5e1;padding:24px 16px}
