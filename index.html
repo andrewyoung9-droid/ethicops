@@ -211,6 +211,44 @@
   @media (min-width: 900px) { .verify-grid { grid-template-columns:1fr 1fr; } }
 </style>
     
+<style id="ui-fixes-0905">
+  /* Keep only the first donate bar in the hero */
+  .hero .donate-hero { display:none; }
+  .hero .donate-hero:first-of-type { display:block; }
+
+  /* If two promo bars somehow stack, hide the 2nd */
+  .promo .bar + .bar { display:none; }
+
+  /* Readable text inside light cards/panels */
+  .content-section .card,
+  .content-section .panel {
+    background:#ffffff;
+    color:#0f172a !important;
+  }
+  .content-section .card h2,
+  .content-section .panel h2,
+  .content-section .card h3,
+  .content-section .panel h3 { color:#0f172a !important; }
+
+  .content-section .card p,
+  .content-section .panel p,
+  .content-section .card li,
+  .content-section .panel li {
+    color:#1f2937 !important;
+    opacity:1;
+  }
+  .content-section .card .muted,
+  .content-section .panel .muted { color:#475569 !important; }
+
+  /* Prevent long commands from bursting cards */
+  pre, code {
+    white-space: pre-wrap;     /* wrap long lines */
+    word-break: break-word;    /* break long tokens if needed */
+    overflow-x: auto;          /* allow horizontal scroll if still needed */
+    max-width: 100%;
+  }
+  .card { overflow:hidden; }
+</style>
 </head>
 <body>
 <header class="sticky-bar site-header">
