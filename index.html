@@ -85,6 +85,26 @@
  .inline-image img{max-width:100%;border-radius:12px;margin:20px auto;display:block;}
  .sprinkle-figure{margin:8px 0 14px}
  img.sprinkle{width:100%;max-height:260px;object-fit:cover;border-radius:12px;border:1px solid #e5eaf1}
+ /* If two promo bars are adjacent, hide the 2nd one */
+.promo .bar + .bar { display: none; }
+.content-section .card .muted,
+.content-section .panel .muted { color:#475569 !important; }
+ /* Make text inside light cards readable */
+.content-section .card,
+.content-section .panel {
+  background: #fff;            /* or keep your current light tone */
+  color: #0f172a !important;   /* dark ink for headings & links */
+}
+
+.content-section .card p,
+.content-section .panel p,
+.content-section .card li,
+.content-section .panel li {
+  color: #1f2937 !important;   /* strong body text */
+  opacity: 1;                  /* ensure not faded */
+}
+
+
 </style>
 <!-- JSON-LD: Organization & SoftwareApplication -->
 <script type="application/ld+json">
