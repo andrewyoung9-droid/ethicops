@@ -246,5 +246,46 @@ html, body, main, section, article, h1, h2, h3, h4, h5, h6, p, li, a, button {
   display:flex; justify-content:center; margin:26px 0 12px;
 }
 
+/* Uniform pricing grid */
+.pricing-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:22px;
+  max-width:1000px;
+  margin:0 auto;
+  align-items:start;
+}
+@media (max-width: 880px){
+  .pricing-grid{ grid-template-columns:1fr; }
+}
+
+/* Card */
+.plan{
+  background:#fff;
+  color:#0f172a;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+.plan-title{ margin:10px 0 8px; font-size:1.15rem; }
+.plan-title a{ color:#1d4ed8; text-decoration:underline; }
+.plan-list{ margin:0 0 12px 18px; line-height:1.7; }
+
+/* Image at top of each card */
+.plan-media{
+  margin:0 0 10px;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:10px;
+}
+.plan-media img{ display:block; width:100%; height:auto; border-radius:8px; }
+
+/* PayPal container inside card */
+.plan-pay{ margin-top:10px; }
+#paypal-std, #paypal-pro{ display:block; }
+
+
 
 
