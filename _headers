@@ -7,7 +7,7 @@
     script-src 'self' 'unsafe-inline' https://www.paypal.com;
     style-src 'self' 'unsafe-inline';
     frame-src https://www.paypal.com;
-    connect-src 'self' https://www.paypal.com;
+    connect-src 'self' https://www.paypal.com https://www.paypalobjects.com;
     form-action 'self' https://www.paypal.com;
     base-uri 'none'; object-src 'none'; frame-ancestors 'none';
     upgrade-insecure-requests

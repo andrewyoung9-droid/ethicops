@@ -1,0 +1,11 @@
+/* minimal safety net in case the original file is missing */
+body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;margin:0}
+.container,main{max-width:1100px;margin:0 auto;padding:0 16px}
+header{background:#0f2e50;color:#e6eef9;border-bottom:1px solid rgba(255,255,255,.1)}
+header .inner{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+nav a{color:#e6eef9;text-decoration:none;padding:.45rem .7rem;border-radius:10px}
+nav a:hover{background:rgba(255,255,255,.1)}
+.hero{background:#f3ede4;border-radius:16px;margin:16px;padding:24px;border:1px solid rgba(0,0,0,.08)}
+.card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:16px;margin:16px 0}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:999px;background:#2563eb;color:#fff;text-decoration:none;font-weight:600}
+img{max-width:100%;height:auto;display:block}
