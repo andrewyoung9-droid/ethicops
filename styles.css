@@ -122,3 +122,47 @@ main.wrap > p { color: var(--ink); background:#fff; border:1px solid var(--line)
 /* Safety: if duplicate blocks remain, hide them */
 .hero .card > .actions + .donate-inline{ display:none }
 
+/* === HERO: hard placement + no stretching === */
+.hero .card{
+  display: grid;
+  grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr);
+  gap: 24px;
+  align-items: start;              /* stop 100% height stretching */
+}
+
+/* Pin columns explicitly */
+.hero .hero-text{ grid-column: 1; }
+.hero .illus{ grid-column: 2; align-self: center; }
+.hero .illus img{ max-width:100%; height:auto; display:block; }
+
+/* Put ALL CTAs in a horizontal row under the copy */
+.actions{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;                 /* wraps neatly on mobile */
+  align-items: center;
+}
+.actions .btn{ white-space: nowrap; height: auto; }
+
+/* Inline PayPal donate button */
+.donate-inline{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+.donate-inline form{ margin: 0 }
+.donate-inline input[type="image"]{ height: 28px; width: auto }
+
+/* Safety net: hide any STRAY hero-level blocks that escaped .hero-text */
+.hero .card > .actions,
+.hero .card > .donate-inline{
+  display: none !important;
+}
+
+/* Absolute belt-and-suspenders: if something forced vertical writing */
+button, .btn, .actions, .donate-inline{
+  writing-mode: horizontal-tb !important;
+}
+
+
