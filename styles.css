@@ -84,3 +84,41 @@ main.wrap > section:not(.hero){
 }
 /* ensure plain paragraphs right under main still readable */
 main.wrap > p { color: var(--ink); background:#fff; border:1px solid var(--line); border-radius: var(--radius); padding:12px 14px; box-shadow: var(--shadow); }
+
+/* --- Hero layout fixes --- */
+.hero .card{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  gap:24px;
+  align-items:start;            /* stop tall stretching */
+}
+.hero .hero-text{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.hero .illus{ align-self:center }
+
+/* Horizontal button row */
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;               /* wrap on small screens */
+}
+.actions .btn{ white-space:nowrap }
+
+/* Inline donate (small PayPal image button) */
+.donate-inline{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:6px;
+}
+.donate-inline form{ margin:0 }
+.donate-inline input[type="image"]{
+  height:28px; width:auto; vertical-align:middle;
+}
+
+/* Safety: if duplicate blocks remain, hide them */
+.hero .card > .actions + .donate-inline{ display:none }
+
