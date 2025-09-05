@@ -6,3 +6,6 @@ __fixed*/
 site_fixed_images*/
 *.zip
 __reset/
+new-images/
+images/_old/
+_*tmp*/
