@@ -140,8 +140,7 @@
   list.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
 })();
 </script>
-
-<main class="wrap wrap">
+  <main class="wrap wrap">
   <section class="hero container">
     <div class="card">
       <div class="hero-text">
@@ -165,6 +164,20 @@
         </div>
       </div>
 
+      <div class="actions">
+        <a class="btn btn-primary" href="download.html">Download Tools</a>
+        <a class="btn btn-ghost" href="about.html">Our Mission</a>
+      </div>
+      <div class="donate-inline">
+        <span>Support EthicOps:</span>
+        <form action="https://www.paypal.com/donate" method="post" target="_top" aria-label="Donate to EthicOps">
+          <input type="hidden" name="hosted_button_id" value="H48TSMYSRJ7PN" />
+          <input type="image"
+           src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
+           name="submit" alt="Donate with PayPal button" />
+          <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+      </div>
       <figure class="illus">
         <img src="/images/house.jpg?v=1757034268" alt="Blueprint of a secured home"/>
       </figure>
