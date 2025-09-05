@@ -112,6 +112,62 @@
 </script>
 </meta> <link rel="icon" type="image/png" href="/images/2.jpg?v=1757034268">
  <link rel="stylesheet" href="/styles.css?v=1757043433">
+
+
+  <style id="index-fix-2025-09-05">
+    /* 1) Hide accidental duplicate promo bar */
+    .promo .bar + .bar { display: none; }
+
+    /* 2) Readable text inside light cards/panels */
+    .content-section .card,
+    .content-section .panel {
+      background: #ffffff;
+      color: #0f172a !important;
+    }
+    .content-section .card h2,
+    .content-section .panel h2,
+    .content-section .card h3,
+    .content-section .panel h3 { color:#0f172a !important; }
+    .content-section .card p,
+    .content-section .panel p,
+    .content-section .card li,
+    .content-section .panel li {
+      color:#1f2937 !important;
+      opacity:1;
+    }
+    .content-section .card .muted,
+    .content-section .panel .muted { color:#475569 !important; }
+
+    /* 3) Keep code blocks inside the card */
+    pre, code {
+      white-space: pre-wrap;
+      word-break: break-word;
+      overflow-x: auto;
+      max-width: 100%;
+    }
+    .content-section .card,
+    .content-section .panel {
+      box-sizing: border-box;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    /* Optional: if a content card contains two panels, make it a 2-col grid on wide screens */
+    @supports(selector(:has(*))) {
+      .content-section .card:has(> .panel + .panel) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        align-items: start;
+      }
+      @media (min-width: 900px) {
+        .content-section .card:has(> .panel + .panel) {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  </style>
+    
 </head>
 <body>
 <header class="sticky-bar site-header">
