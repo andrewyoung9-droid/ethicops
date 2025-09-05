@@ -1,11 +1,78 @@
-/* minimal safety net in case the original file is missing */
-body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;margin:0}
-.container,main{max-width:1100px;margin:0 auto;padding:0 16px}
-header{background:#0f2e50;color:#e6eef9;border-bottom:1px solid rgba(255,255,255,.1)}
-header .inner{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+/* ==== EthicOps refined theme ==== */
+:root{
+  --bg:#0c2340;           /* deep navy page bg */
+  --surface:#0f2e50;      /* header/nav strip */
+  --paper:#ffffff;        /* page content */
+  --panel:#f4eee6;        /* hero card paper */
+  --ink:#0b1220;          /* primary text */
+  --muted:#4b5563;        /* secondary text */
+  --brand:#2563eb;        /* buttons/links */
+  --brand-600:#1d4ed8;
+  --line:rgba(0,0,0,.08);
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.06);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+  color:var(--ink);
+  background:linear-gradient(180deg, var(--surface) 0 120px, var(--bg) 120px 100%);
+  line-height:1.6; min-height:100vh;
+}
+
+/* Layout */
+.container, main, .content {max-width:1100px;margin:0 auto;padding:0 16px}
+section{margin:24px 0}
+
+/* Header + nav */
+header, .site-header{
+  background:var(--surface);
+  color:#e6eef9;
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+header .inner, .site-header .inner{
+  display:flex; align-items:center; justify-content:space-between;
+  height:64px; gap:1rem; padding:0 16px;
+}
 nav a{color:#e6eef9;text-decoration:none;padding:.45rem .7rem;border-radius:10px}
-nav a:hover{background:rgba(255,255,255,.1)}
-.hero{background:#f3ede4;border-radius:16px;margin:16px;padding:24px;border:1px solid rgba(0,0,0,.08)}
-.card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:16px;margin:16px 0}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:999px;background:#2563eb;color:#fff;text-decoration:none;font-weight:600}
-img{max-width:100%;height:auto;display:block}
+nav a:hover{background:rgba(255,255,255,.10)}
+nav .active{background:rgba(255,255,255,.15)}
+img[alt*="logo" i]{height:26px;width:auto;display:inline-block}
+
+/* Hero */
+.hero, #hero, .jumbotron{
+  background:var(--panel);
+  border-radius:calc(var(--radius) + 6px);
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+  padding:24px; margin:24px 0;
+}
+.hero h1{font-size:clamp(1.6rem,3.8vw,2.6rem); line-height:1.2; margin:.2rem 0 1rem}
+.lead{color:var(--muted); max-width:70ch}
+
+/* Cards */
+.card{
+  background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius); padding:16px; box-shadow:var(--shadow); margin:16px 0;
+}
+
+/* Buttons */
+.btn, a.button, .cta{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.6rem 1rem; border-radius:999px; background:var(--brand);
+  color:#fff !important; font-weight:600; text-decoration:none; box-shadow:var(--shadow);
+}
+.btn:hover, a.button:hover{background:var(--brand-600)}
+
+/* Media */
+img{max-width:100%; height:auto; display:block; border-radius:12px}
+
+/* Footer */
+footer, .site-footer{color:#cbd5e1; padding:24px 16px}
+
+/* Responsive tweaks */
+@media (max-width:860px){
+  header .inner{flex-wrap:wrap; height:auto; padding:8px 12px}
+  .hero{padding:18px}
+}
