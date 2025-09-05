@@ -57,7 +57,7 @@
  .promo{margin:22px 0 36px}
  .promo .bar{background:rgba(255,255,255,.1);border-radius:12px;padding:18px 22px;color:#fff}
 
- .content-section{margin:40px auto;color:#e8eef6;line-height:1.7}
+ .content-section{margin:40px auto;color:#0f172a;line-height:1.7}
  .content-section h2{font-size:1.6rem;margin-bottom:12px}
  .content-section p{margin-bottom:18px}
 
@@ -187,6 +187,29 @@
       }
     }
   </style>
+    
+
+
+<style id="ui-fixes-2025-09-05">
+  /* Hide accidental duplicate support bars (defense-in-depth) */
+  .donate-hero + .donate-hero{ display:none; }
+  .promo .bar + .bar{ display:none; }
+
+  /* Readable text inside light cards & panels */
+  .card, .panel { color:#0f172a !important; }
+  .card p, .panel p, .card li, .panel li { color:#1f2937 !important; opacity:1; }
+  .card h2, .panel h2, .card h3, .panel h3 { color:#0f172a !important; }
+  .content-section .muted, .card .muted, .panel .muted { color:#475569 !important; }
+
+  /* Keep code blocks from bursting out of cards */
+  pre, code { white-space:pre-wrap; word-break:break-word; overflow-x:auto; max-width:100%; }
+  .card .panel { max-width:100%; min-width:0; box-sizing:border-box; }
+  .card { overflow:hidden; }
+
+  /* Responsive two-up layout for verify boxes when wrapped in .verify-grid */
+  .verify-grid { display:grid; grid-template-columns:1fr; gap:16px; }
+  @media (min-width: 900px) { .verify-grid { grid-template-columns:1fr 1fr; } }
+</style>
     
 </head>
 <body>
