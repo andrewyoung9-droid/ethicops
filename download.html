@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -118,21 +117,31 @@
 <section class="hero">
 <h1 class="title">Download Kame-Ha Optimizer</h1>
 <p class="lede">Cryptographically signed, with published hashes and step-by-step verification. No telemetry.</p>
+
 <div aria-label="Downloads" class="panel grid" role="region">
-<div>
-<h2>Installer (recommended)</h2>
-<p class="lede">Stable release — creates Start Menu shortcuts and enables easy updates.</p>
-<p><a class="btn btn-primary" download="" href="/downloads/KameHaSetup.exe">Download .exe</a></p>
-<p><small class="muted">Signature: <a download="" href="/downloads/KameHaSetup.exe.asc">PGP .asc</a></small></p>
-</div>
-<div>
-<h2>Portable (no install)</h2>
-<p class="lede">Extract and run. Ideal for offline or admin-restricted environments.</p>
-<p><a class="btn btn-ghost" download="" href="/downloads/KameHa_Portable.zip">Download .zip</a></p>
-<p><small class="muted">Signature: <a download="" href="/downloads/KameHa_Portable.zip.asc">PGP .asc</a></small></p>
-</div>
+  <div>
+    <h2>Installer (recommended)</h2>
+    <p class="lede">Stable release — creates Start Menu shortcuts and enables easy updates.</p>
+    <p>
+      <a class="btn btn-primary" href="https://github.com/andrewyoung9-droid/binaries/releases/download/v1.0.0/KameHa_Setup_v1.0.0.exe" rel="noopener">
+        Mirror: GitHub Releases (.exe)
+      </a>
+    </p>
+    <p><small class="muted">Checksums: <a href="https://github.com/andrewyoung9-droid/binaries/releases/download/v1.0.0/checksums.txt" rel="noopener">checksums.txt</a></small></p>
+  </div>
+  <div>
+    <h2>Portable (no install)</h2>
+    <p class="lede">Extract and run. Ideal for offline or admin-restricted environments.</p>
+    <p>
+      <a class="btn btn-ghost" href="https://github.com/andrewyoung9-droid/binaries/releases/download/v1.0.0/KameHa_Portable_v1.0.0.zip" rel="noopener">
+        Mirror: GitHub Releases (.zip)
+      </a>
+    </p>
+    <p><small class="muted">Checksums: <a href="https://github.com/andrewyoung9-droid/binaries/releases/download/v1.0.0/checksums.txt" rel="noopener">checksums.txt</a></small></p>
+  </div>
 </div>
 </section>
+
 <section class="section">
 <h2>Verify the download (SHA-256)</h2>
 <p>After downloading, verify integrity matches our published hash.</p>
@@ -142,12 +151,14 @@
 Installer: SHA256= 53fc0ce0256af0af5312a4b1ba4b53baf0971e7ce34346e46c67b067a25c7ba4
 Portable : SHA256= 108ac140ed24a20ae0794ea746531091edcede98e4743ac46878f8bfebcbfec9
 </pre>
+<p><a href="https://github.com/andrewyoung9-droid/binaries/releases/download/v1.0.0/checksums.txt" rel="noopener">View complete checksums.txt</a></p>
 <p><strong>Windows PowerShell</strong>:</p>
 <pre>Get-FileHash .\KameHaSetup.exe -Algorithm SHA256</pre>
 <p><strong>macOS / Linux</strong>:</p>
 <pre>shasum -a 256 KameHa_Portable.zip</pre>
 </div>
 </section>
+
 <section class="section">
 <h2>Verify the signature (PGP)</h2>
 <div class="panel">
@@ -171,6 +182,7 @@ REPLACE_WITH_YOUR_PUBLIC_KEY
 </div>
 <p class="small muted">Tip: publish your key fingerprint here and on your social profiles for cross-verification.</p>
 </section>
+
 <section class="section">
 <h2>Purchase / Donate</h2>
 <article class="content-section" style="text-align:left">
@@ -238,12 +250,14 @@ REPLACE_WITH_YOUR_PUBLIC_KEY
       })();
     </script>
 </section>
+
 <section class="section">
 <h2>Release notes</h2>
 <div class="panel">
 <p><strong>v1.0.0</strong> — initial release. Profiles for Gaming, Recording, and Privacy-Max; service hardening presets; one-click rollbacks.</p>
 </div>
 </section>
+
 <section class="section">
 <h2>Requirements</h2>
 <div class="panel">
@@ -254,26 +268,31 @@ REPLACE_WITH_YOUR_PUBLIC_KEY
 </ul>
 </div>
 </section>
+
 <section class="section">
 <h2>Mirrors &amp; integrity</h2>
 <div class="panel">
 <p>If a mirror is used, verify the file against the hashes above. We never distribute via random file-sharing sites.</p>
 <ul>
-<li><a href="https://ethicops.gt.tc/downloads/" rel="noopener">Primary mirror</a></li>
-<li><a href="#" rel="noopener">Secondary mirror (add later)</a></li>
+  <li><a href="https://github.com/andrewyoung9-droid/binaries/releases/download/v1.0.0/KameHa_Portable_v1.0.0.zip" rel="noopener">Portable ZIP — GitHub Releases</a></li>
+  <li><a href="https://github.com/andrewyoung9-droid/binaries/releases/download/v1.0.0/KameHa_Setup_v1.0.0.exe" rel="noopener">Installer EXE — GitHub Releases</a></li>
+  <li><a href="https://github.com/andrewyoung9-droid/binaries/releases/download/v1.0.0/checksums.txt" rel="noopener">SHA-256 checksums (txt)</a></li>
 </ul>
 </div>
 </section>
+
 <section class="section">
 <h2>Privacy &amp; support</h2>
 <div class="panel">
 <p>No telemetry, ads, or hidden network calls. If you find a bug, email <a href="mailto:support@ethicops.gt.tc">support@ethicops.gt.tc</a>.</p>
 </div>
 </section>
+
 <figure class="inline-image">
 <img alt="Kame-Ha UI preview" src="/images/R.jpg?v=1757034268"/>
 </figure>
 </main>
+
 <footer>
 <div class="container">© <span id="y"></span> EthicOps</div>
 </footer>
