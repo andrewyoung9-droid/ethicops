@@ -13,7 +13,7 @@
 <meta property="og:type" content="website"/>
 <meta property="og:image" content="/images/10.jpg?v=1757034268"/>
 
-<!-- Meta security (still set real headers at the edge if possible) -->
+<!-- Security meta (still prefer server/edge headers) -->
 <meta http-equiv="Referrer-Policy" content="no-referrer">
 <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 
@@ -23,6 +23,7 @@
 <link rel="icon" type="image/png" href="/images/2.jpg?v=1757034268">
 <link rel="stylesheet" href="/styles.css?v=1757043433">
 
+<!-- inline CSS kept (you said you’ll handle CSS, so leave as-is or move to styles.css) -->
 <style>
   :root{
     --bg:#0d2b57; --card:#f6efe6; --ink:#ffffff;
@@ -57,15 +58,18 @@
   .badge{display:inline-block;background:#ffb668;color:#4b2a00;border-radius:999px;font-weight:700;padding:6px 12px}
   .title{font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.03;margin:.35rem 0 1rem;font-weight:800}
   .lede{max-width:36ch}
-  .actions{display:flex;gap:12px;margin-top:18px}
-  .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:12px 16px;font-weight:700;border:2px solid transparent}
+
+  /* Make buttons horizontal and keep them under the text */
+  .actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:12px 16px;font-weight:700;border:2px solid transparent;white-space:nowrap}
   .btn-primary{background:var(--cta);color:var(--cta-ink)}
   .btn-ghost{color:#000;border-color:#cbd5e1;background:#fff}
+
   .illus{align-self:center;background:#fff;border:1px solid #e6e3db;border-radius:18px;padding:22px;min-height:240px}
   .illus img{max-width:100%;height:auto;object-fit:contain;display:block}
 
   /* Inline donate (under hero) */
-  .donate-inline{display:flex;align-items:center;gap:8px;justify-content:center;margin:8px 0 0}
+  .donate-inline{display:flex;align-items:center;gap:8px;margin:10px 0 0}
   .donate-inline span{font-weight:600;color:#0f172a}
   .donate-inline form{margin:0}
   .donate-inline input[type="image"]{height:28px;width:auto;vertical-align:middle}
@@ -140,66 +144,61 @@
   list.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
 })();
 </script>
-  <main class="wrap wrap">
+
+<main class="wrap wrap">
+  <!-- HERO (fixed) -->
   <section class="hero container">
     <div class="card">
       <div class="hero-text">
         <span class="badge">EthicOps</span>
         <h1 class="title">Expert Level Windows Tweaks for Everyday Users.</h1>
         <h3>We put the power in <em>your</em> hands.</h3>
-        <p class="lede">Minnesota-born and globally minded. We build tools for gamers, for privacy-first users, and PC enthusiasts. Harden your device, boost your FPS, and take back control.</p>
-       <div class="actions">
-        <a href="#about" class="btn">Learn More</a>
-        <a href="#resources" class="btn">Resources</a>
-        <a href="#contact" class="btn">Contact</a>
+        <p class="lede">
+          Minnesota-born and globally minded. We build tools for gamers, for privacy-first users,
+          and PC enthusiasts. Harden your device, boost your FPS, and take back control.
+        </p>
+
+        <!-- Single horizontal button row -->
+        <div class="actions">
+          <a class="btn btn-primary" href="download.html">Download Tools</a>
+          <a class="btn btn-ghost"   href="about.html">Our Mission</a>
+          <a class="btn btn-ghost"   href="#resources">Resources</a>
+          <a class="btn btn-ghost"   href="contact.html">Contact</a>
+        </div>
+
+        <!-- Inline donate stays under CTAs -->
+        <div class="donate-inline">
+          <span>Support Us:</span>
+          <form action="https://www.paypal.com/donate" method="post" target="_top" aria-label="Donate to EthicOps">
+            <input type="hidden" name="hosted_button_id" value="H48TSMYSRJ7PN" />
+            <input type="image"
+              src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
+              name="submit" alt="Donate with PayPal button" />
+            <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          </form>
+        </div>
       </div>
 
-        <!-- Inline donate button -->
-      <div class="donate-inline">
-        <span>Support Us:</span>
-        <form action="https://www.paypal.com/donate" method="post" target="_top">
-          <input type="hidden" name="hosted_button_id" value="H48TSMYSRJ7PN" />
-          <input type="image"
-            src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
-            border="0"
-            name="submit"
-            title="Donate with PayPal"
-            alt="Donate with PayPal button" />
-        </form>
-      </div>
-    </div>
-
-      <div class="actions">
-        <a class="btn btn-primary" href="download.html">Download Tools</a>
-        <a class="btn btn-ghost" href="about.html">Our Mission</a>
-      </div>
-      <div class="donate-inline">
-        <span>Support EthicOps:</span>
-        <form action="https://www.paypal.com/donate" method="post" target="_top" aria-label="Donate to EthicOps">
-          <input type="hidden" name="hosted_button_id" value="H48TSMYSRJ7PN" />
-          <input type="image"
-           src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
-           name="submit" alt="Donate with PayPal button" />
-          <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-        </form>
-      </div>
+      <!-- Right column is image only -->
       <figure class="illus">
         <img src="/images/house.jpg?v=1757034268" alt="Blueprint of a secured home"/>
       </figure>
     </div>
   </section>
 
+  <!-- Promo -->
   <section class="promo container">
     <div class="bar">Pre-emptive tuning before the antivirus. Ethically engineered, signed binaries, no spyware, no telemetry.</div>
   </section>
 
+  <!-- Sprinkle image -->
   <section aria-label="Gallery sprinkle" class="container">
     <figure class="sprinkle-figure">
       <img class="sprinkle" src="/images/5.jpg?v=1757034268" alt="EthicOps shield logo"/>
     </figure>
   </section>
 
-  <!-- Products copy (kept as-is, now readable) -->
+  <!-- Products copy -->
   <section class="container" id="products" aria-labelledby="grid-title">
     <h2 id="grid-title" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Products</h2>
     <article class="copy" style="display:grid;gap:22px;margin:4px 0 14px">
@@ -213,7 +212,7 @@
       <p style="margin:0">Only signed binaries; all changes use <em>documented</em> Windows APIs, group policy templates, and PowerShell cmdlets. If a tweak isn’t reversible or violates best practices, it doesn’t ship.</p>
     </article>
 
-    <!-- Purchase (kept) -->
+    <!-- Purchase -->
     <div class="paywrap" style="margin:26px 0 12px;display:flex;justify-content:center">
       <div id="paypal-container-KAMEHA"></div>
     </div>
@@ -271,7 +270,7 @@
     <p class="muted" style="margin-top:10px">Expected Publisher: <em>EthicOps</em>. For PGP verification, see the instructions on the download page.</p>
   </section>
 
-  <!-- Donate section (kept) -->
+  <!-- Donate section -->
   <section class="paypal-section container" id="donate">
     <figure class="sprinkle-figure"><img class="sprinkle" src="/images/eastman-childs-ycazg-6lTS0-unsplash.jpg?v=1757034268" alt="Twin Cities skyline"></figure>
     <h2><a rel="noopener" target="_blank" href="https://www.paypal.com/donate?token=TyvKuCCpEoxUiEqK_tJAJgpP65Nf770QvbU90hvigaFQn4Hv3kutNJjT2EBmMwoGox8F1BMX0wi9qg_t">Support Our Work</a></h2>
@@ -304,7 +303,3 @@
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
-<!-- bust:1757041906 -->
-
-<!-- bust:1757042868 -->
