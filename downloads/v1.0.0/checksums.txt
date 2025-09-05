@@ -1,0 +1,15 @@
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          B26E8F31B85D25C64483138CD84CED87A78CC8ED32A46271E319B0C6D79D08C5       C:\Users\Tungs\OneDrive\Desktop\release\KameHa_Portable_v1.0.0.z…
+
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          6E789157D99433403F4597D1BDF82ACC3B1B9F3556136AE3B8E9E5D26EE17185       C:\Users\Tungs\OneDrive\Desktop\release\KameHa_Setup_v1.0.0.exe
+
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          6E789157D99433403F4597D1BDF82ACC3B1B9F3556136AE3B8E9E5D26EE17185       C:\Users\Tungs\OneDrive\Desktop\release\KameHa_Setup_v1.0.0.exe
+
