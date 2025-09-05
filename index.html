@@ -18,6 +18,31 @@
 <!-- PayPal SDK (loads once per page) -->
 <script src="https://www.paypal.com/sdk/js?client-id=BAAJhEyAS5Uh_I_PbmU4K7cfRo1uWR8Bmx9JHpzm78Oq-BNZ7dhvHyB9wn-msQmQ-8YgvnonDQfewphiSg&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 <style>
+ /* ===== Readable text below the hero ===== */
+main > *:not(.hero),
+main > *:not(.hero) p,
+main > *:not(.hero) li,
+main > *:not(.hero) small,
+main > *:not(.hero) em { 
+  color: #1e293b !important;    /* strong body ink */
+}
+
+main > *:not(.hero) h2,
+main > *:not(.hero) h3 {
+  color: #0f172a !important;    /* darker headings */
+}
+
+/* Make bullets and links readable too */
+main > *:not(.hero) ::marker { color: #475569; }
+main > *:not(.hero) a { color: #2563eb; text-decoration: underline; }
+
+/* Optional: if your promo bars are hard to read, make them more opaque */
+.promo .bar { 
+  background: rgba(255,255,255,.92); 
+  color: #0f172a; 
+  border: 1px solid #e5e7eb;
+}
+
  :root{
  --bg:#0d2b57;
  --card:#f6efe6;
