@@ -218,39 +218,59 @@
     <div class="cta-bar" role="region" aria-label="Announcement">Pre-order <a href="download.html">Kame-Ha</a> now — lifetime license, updates included.</div>
   </section>
 
-  <!-- Pricing -->
-  <section class="container" id="pricing" style="margin-top:34px" aria-labelledby="pricing-title">
-    <h2 id="pricing-title" style="font-size:1.6rem;margin-bottom:12px">Choose your edition</h2>
-    <div class="pricing-grid" style="display:grid;gap:18px;grid-template-columns:1fr 1fr">
-      <figure class="sprinkle-figure"><img class="sprinkle" src="/images/6.jpg?v=1757034268" alt="Kame-Ha Optimizer screenshot"></figure>
+  <!-- === PRICING (uniform cards) === -->
+<section class="container" id="pricing" aria-labelledby="pricing-title">
+  <h2 id="pricing-title" style="font-size:1.6rem;margin:0 0 14px">Choose your edition</h2>
 
-      <article class="plan" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:16px">
-        <h3 style="margin:0 0 8px"><a href="download.html">Kame-Ha</a> Standard</h3>
-        <ul style="margin:0 0 12px 18px;line-height:1.7">
-          <li>One-click Performance / Privacy profiles</li>
-          <li>Service &amp; scheduled-task trimming</li>
-          <li>Network &amp; legacy protocol hardening</li>
-          <li>Signed binaries · No telemetry</li>
-        </ul>
-        <div id="paypal-container-KAMEHA-STD"></div>
-      </article>
+  <div class="pricing-grid">
+    <!-- Standard -->
+    <article class="plan" id="plan-standard">
+      <figure class="plan-media">
+        <img src="/images/6.jpg?v=1757034268" alt="Kame-Ha Optimizer screenshot">
+      </figure>
 
-      <article class="plan" style="background:linear-gradient(180deg,#143d6e,#0e315b);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:16px;box-shadow:0 10px 24px rgba(0,0,0,.25)">
-        <h3 style="margin:0 0 8px;color:#fff"><a href="download.html">Kame-Ha</a> Pro</h3>
-        <ul style="margin:0 0 12px 18px;line-height:1.7;color:#e9f3ff">
-          <li>Everything in Standard</li>
-          <li>Scheduled profiles &amp; auto-rollback checkpoints</li>
-          <li>Extra hardening presets (recording/streaming)</li>
-          <li>Priority email support</li>
-        </ul>
-        <div id="paypal-container-KAMEHA-PRO"></div>
-      </article>
-    </div>
-    <script>
-      paypal.HostedButtons({ hostedButtonId: "Z7Q5EU9TWKUH2" }).render("#paypal-container-KAMEHA-STD");
-      paypal.HostedButtons({ hostedButtonId: "REPLACE_WITH_PRO_BUTTON_ID" }).render("#paypal-container-KAMEHA-PRO");
-    </script>
-  </section>
+      <h3 class="plan-title"><a href="download.html">Kame-Ha</a> Standard</h3>
+      <ul class="plan-list">
+        <li>One-click Performance / Privacy profiles</li>
+        <li>Service &amp; scheduled-task trimming</li>
+        <li>Network &amp; legacy protocol hardening</li>
+        <li>Signed binaries · No telemetry</li>
+      </ul>
+
+      <!-- PayPal hosted buttons: Standard -->
+      <div class="plan-pay">
+        <div id="paypal-std"></div>
+      </div>
+    </article>
+
+    <!-- Pro -->
+    <article class="plan" id="plan-pro">
+      <figure class="plan-media">
+        <img src="/images/6.jpg?v=1757034268" alt="Kame-Ha Pro features">
+      </figure>
+
+      <h3 class="plan-title"><a href="download.html">Kame-Ha</a> Pro</h3>
+      <ul class="plan-list">
+        <li>Everything in Standard</li>
+        <li>Scheduled profiles &amp; auto-rollback checkpoints</li>
+        <li>Extra hardening presets (recording/streaming)</li>
+        <li>Priority email support</li>
+      </ul>
+
+      <!-- PayPal hosted buttons: Pro -->
+      <div class="plan-pay">
+        <div id="paypal-pro"></div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Render the two hosted buttons (keep exactly one SDK include in <head>) -->
+  <script>
+    paypal.HostedButtons({ hostedButtonId: "Z7Q5EU9TWKUH2" }).render("#paypal-std");     // ← Standard ID
+    paypal.HostedButtons({ hostedButtonId: "REPLACE_WITH_PRO_BUTTON_ID" }).render("#paypal-pro"); // ← Pro ID
+  </script>
+</section>
+
 
   <!-- Quick verify -->
   <section class="container" id="verify" style="margin-top:26px">
