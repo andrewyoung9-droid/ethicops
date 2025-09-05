@@ -165,4 +165,86 @@ button, .btn, .actions, .donate-inline{
   writing-mode: horizontal-tb !important;
 }
 
+/* ====== GLOBAL SAFETY RESETS ====== */
+/* Kill accidental vertical writing anywhere */
+html, body, main, section, article, h1, h2, h3, h4, h5, h6, p, li, a, button {
+  writing-mode: horizontal-tb !important;
+}
+
+/* Avoid mysterious full-height stretch in grids */
+.card, .pricing-grid { align-items: start !important; }
+
+/* ====== BUTTON VISIBILITY ====== */
+/* Some theme sets button text transparent until :hover — force visible */
+.btn, .btn * { color: inherit !important; text-shadow: none !important; }
+
+/* Our two button styles */
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:.5rem; padding:12px 16px; font-weight:800; border-radius:14px;
+  border:2px solid transparent; line-height:1; text-decoration:none;
+}
+.btn-primary { background: var(--cta, #f59f45); color: var(--cta-ink, #111827); }
+.btn-primary:hover { filter: brightness(0.95); }
+.btn-ghost { background:#fff; color:#0f172a; border-color:#e5e7eb; }
+.btn-ghost:hover { background:#f8fafc; }
+
+/* ====== HERO LAYOUT (keeps CTAs in left column) ====== */
+.hero .card{
+  display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  gap:24px; align-items:start;
+}
+.hero .hero-text{ grid-column:1; display:flex; flex-direction:column; gap:12px; }
+.hero .illus{ grid-column:2; align-self:center; }
+.hero .illus img{ max-width:100%; height:auto; display:block; }
+
+/* ====== CONTENT (middle section “vertical text” fix) ====== */
+.container, .content-section, .copy, .panel, .card {
+  writing-mode: horizontal-tb !important; /* belt & suspenders */
+  white-space: normal !important;
+}
+
+/* ====== PRICING / PRO NORMALIZATION ====== */
+/* Two equal cards, centered, consistent white backgrounds */
+.pricing-grid{
+  display:grid; gap:22px; grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items:start; max-width:1000px; margin:0 auto;
+}
+@media (max-width: 880px){
+  .pricing-grid{ grid-template-columns:1fr; }
+}
+
+.plan{
+  background:#fff; color:#0f172a;
+  border:1px solid #e5e7eb; border-radius:14px; padding:16px;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+.plan h3 a{ color:#1d4ed8; text-decoration:underline; }
+
+/* Remove the old navy/gradient if still applied anywhere */
+.plan.pro, .plan--pro{
+  background:#fff !important; color:#0f172a !important;
+  border-color:#e5e7eb !important; box-shadow:0 10px 24px rgba(0,0,0,.06) !important;
+}
+
+/* Image card on the left stays tidy */
+.pricing-grid figure.sprinkle-figure{
+  margin:0; align-self:start; background:#fff; border:1px solid #e5e7eb;
+  border-radius:12px; padding:10px;
+}
+.pricing-grid img.sprinkle{ border:none; }
+
+/* ====== PAYPAL BLOCKS — neat & aligned with cards ====== */
+#paypal-container-KAMEHA,
+#paypal-container-KAMEHA-STD,
+#paypal-container-KAMEHA-PRO,
+#paypal-container-DONATE,
+#paypal-container-LXABRF3MWNWJQ8{
+  display:block; margin:12px 0 0; 
+}
+.paywrap{
+  display:flex; justify-content:center; margin:26px 0 12px;
+}
+
+
 
