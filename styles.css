@@ -286,6 +286,80 @@ html, body, main, section, article, h1, h2, h3, h4, h5, h6, p, li, a, button {
 .plan-pay{ margin-top:10px; }
 #paypal-std, #paypal-pro{ display:block; }
 
+/* ===== LEGAL PAGES ===== */
+body.legal-page {
+  background: #f9fafb;      /* light gray background */
+  color: #1f2937;           /* slate text */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
+  line-height: 1.6;
+}
+
+body.legal-page header,
+body.legal-page footer,
+body.legal-page .hero,
+body.legal-page .promo,
+body.legal-page .illus,
+body.legal-page .sprinkle-figure {
+  display: none !important; /* hide flashy sections */
+}
+
+body.legal-page .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Headings */
+body.legal-page h1, 
+body.legal-page h2, 
+body.legal-page h3 {
+  color: #111827;
+  margin-top: 1.5rem;
+  margin-bottom: .75rem;
+  font-weight: 700;
+}
+body.legal-page h1 { font-size: 1.75rem; }
+body.legal-page h2 { font-size: 1.4rem; }
+body.legal-page h3 { font-size: 1.15rem; }
+
+/* Paragraphs and lists */
+body.legal-page p, 
+body.legal-page li {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+body.legal-page ul, 
+body.legal-page ol {
+  margin-left: 1.5rem;
+}
+
+/* Links (simple blue underline) */
+body.legal-page a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Tables if any */
+body.legal-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+body.legal-page th, 
+body.legal-page td {
+  border: 1px solid #e5e7eb;
+  padding: .5rem .75rem;
+  text-align: left;
+}
+body.legal-page th {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
 
 
 
