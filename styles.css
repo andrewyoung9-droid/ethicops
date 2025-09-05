@@ -1,13 +1,14 @@
-/* ==== EthicOps refined theme ==== */
+/* ==== EthicOps refined theme (compact, navy) ==== */
 :root{
-  --bg:#0c2340;           /* deep navy page bg */
-  --surface:#0f2e50;      /* header/nav strip */
-  --paper:#ffffff;        /* page content */
-  --panel:#f4eee6;        /* hero card paper */
+  --wrap: 880px;          /* overall content width */
+  --bg:#0c2340;           /* deep navy background */
+  --surface:#0f2e50;      /* header strip */
+  --panel:#f4eee6;        /* hero panel */
+  --paper:#ffffff;        /* cards/panels */
   --ink:#0b1220;          /* primary text */
-  --muted:#4b5563;        /* secondary text */
-  --brand:#2563eb;        /* buttons/links */
-  --brand-600:#1d4ed8;
+  --muted:#6b7280;        /* secondary text */
+  --brand:#2563eb; --brand-600:#1d4ed8;
+  --gold:#f59e0b; --gold-600:#d97706;
   --line:rgba(0,0,0,.08);
   --radius:16px;
   --shadow:0 10px 30px rgba(0,0,0,.06);
@@ -17,28 +18,42 @@ html,body{margin:0;padding:0}
 body{
   font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
   color:var(--ink);
-  background:linear-gradient(180deg, var(--surface) 0 120px, var(--bg) 120px 100%);
+  background:var(--bg);
   line-height:1.6; min-height:100vh;
 }
 
-/* Layout */
-.container, main, .content {max-width:1100px;margin:0 auto;padding:0 16px}
+/* Layout wrap */
+.wrap, main, .container {max-width:var(--wrap); margin:0 auto; padding:0 16px}
 section{margin:24px 0}
 
-/* Header + nav */
-header, .site-header{
+/* Site header */
+body>header, .site-header{
   background:var(--surface);
   color:#e6eef9;
   border-bottom:1px solid rgba(255,255,255,.09);
 }
-header .inner, .site-header .inner{
-  display:flex; align-items:center; justify-content:space-between;
-  height:64px; gap:1rem; padding:0 16px;
+body>header .inner, .site-header .inner{
+  max-width:var(--wrap); margin:0 auto; padding:10px 16px;
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
 }
-nav a{color:#e6eef9;text-decoration:none;padding:.45rem .7rem;border-radius:10px}
-nav a:hover{background:rgba(255,255,255,.10)}
-nav .active{background:rgba(255,255,255,.15)}
-img[alt*="logo" i]{height:26px;width:auto;display:inline-block}
+body>header img[alt*="logo" i]{height:26px; width:auto; display:inline-block; vertical-align:middle}
+body>header nav a{
+  color:#e6eef9; text-decoration:none; padding:.45rem .7rem; border-radius:10px; font-size:.95rem;
+}
+body>header nav a:hover{background:rgba(255,255,255,.10)}
+body>header nav .active{background:rgba(255,255,255,.15)}
+/* hide any stray select "Menu" fallback in header */
+body>header select{display:none}
+
+/* Buttons */
+.btn, a.button, .cta{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.55rem 1rem; border-radius:999px; background:var(--brand);
+  color:#fff !important; font-weight:600; text-decoration:none; box-shadow:var(--shadow);
+}
+.btn:hover{background:var(--brand-600)}
+.btn.donate{background:var(--gold); color:#111 !important}
+.btn.donate:hover{background:var(--gold-600)}
 
 /* Hero */
 .hero, #hero, .jumbotron{
@@ -46,33 +61,14 @@ img[alt*="logo" i]{height:26px;width:auto;display:inline-block}
   border-radius:calc(var(--radius) + 6px);
   box-shadow:var(--shadow);
   border:1px solid var(--line);
-  padding:24px; margin:24px 0;
+  padding:22px; margin:24px auto; max-width:var(--wrap);
 }
-.hero h1{font-size:clamp(1.6rem,3.8vw,2.6rem); line-height:1.2; margin:.2rem 0 1rem}
+.hero h1{font-size:clamp(1.6rem,3.6vw,2.6rem); line-height:1.2; margin:.2rem 0 1rem}
 .lead{color:var(--muted); max-width:70ch}
 
-/* Cards */
-.card{
-  background:#fff;border:1px solid var(--line);
-  border-radius:var(--radius); padding:16px; box-shadow:var(--shadow); margin:16px 0;
-}
-
-/* Buttons */
-.btn, a.button, .cta{
-  display:inline-flex; align-items:center; gap:.5rem;
-  padding:.6rem 1rem; border-radius:999px; background:var(--brand);
-  color:#fff !important; font-weight:600; text-decoration:none; box-shadow:var(--shadow);
-}
-.btn:hover, a.button:hover{background:var(--brand-600)}
-
-/* Media */
+/* Cards & general content */
+.card{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow); margin:16px 0}
 img{max-width:100%; height:auto; display:block; border-radius:12px}
 
 /* Footer */
 footer, .site-footer{color:#cbd5e1; padding:24px 16px}
-
-/* Responsive tweaks */
-@media (max-width:860px){
-  header .inner{flex-wrap:wrap; height:auto; padding:8px 12px}
-  .hero{padding:18px}
-}
