@@ -72,3 +72,15 @@ img{max-width:100%; height:auto; display:block; border-radius:12px}
 
 /* Footer */
 footer, .site-footer{color:#cbd5e1; padding:24px 16px}
+
+/* --- restore card look for content sections --- */
+main.wrap > section:not(.hero){
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+}
+/* ensure plain paragraphs right under main still readable */
+main.wrap > p { color: var(--ink); background:#fff; border:1px solid var(--line); border-radius: var(--radius); padding:12px 14px; box-shadow: var(--shadow); }
